@@ -1,9 +1,9 @@
 #:schema node_modules/wrangler/config-schema.json
 
 name = "project-origin"
+pages_build_output_dir = "./build/client"
 compatibility_date = "2022-06-02"
-compatibility_flags = ["nodejs_compat"]
-upload_source_maps = true
+compatibility_flags = ["streams_enable_constructors"]
 
 [[kv_namespaces]]
 binding = "KV_SESSION_STORAGE"

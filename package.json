@@ -5,14 +5,13 @@
 	"type": "module",
 	"scripts": {
 		"build": "remix vite:build",
-		"deploy": "wrangler pages deploy ./build/client",
+		"deploy": "wrangler pages deploy",
 		"dev": "run-p dev:*",
 		"dev:remix": "remix vite:dev",
 		"dev:types": "tsc -b --watch --preserveWatchOutput",
 		"lint": "eslint .",
 		"check-format": "prettier --check . && biome check .",
 		"format": "prettier --write . && biome check --apply .",
-		"start": "wrangler pages dev ./build/client",
 		"typegen": "wrangler types"
 	},
 	"dependencies": {
