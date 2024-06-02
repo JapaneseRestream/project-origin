@@ -5,6 +5,7 @@ import {
 } from "@remix-run/cloudflare";
 import { type RaPayload, defaultHandler } from "ra-data-simple-prisma";
 import { z } from "zod";
+import { setupDb } from "../lib/prisma.server";
 
 export const resourceSchema = <
 	TResource extends string,
@@ -28,10 +29,11 @@ const handlerSchema = z.union([
 
 const handler = async ({
 	request,
-	context: { prisma },
+	context: { cloudflare },
 }: LoaderFunctionArgs | ActionFunctionArgs) => {
 	const body = handlerSchema.parse(await request.json()) as RaPayload;
-	const result = await defaultHandler(body, prisma);
+	await using db = setupDb(cloudflare);
+	const result = await defaultHandler(body, db.prisma);
 	return json(result);
 };
 

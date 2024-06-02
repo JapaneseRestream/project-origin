@@ -17,32 +17,29 @@ export default async function handleRequest(
 	// This is ignored so we can keep it in the template for visibility.  Feel
 	// free to delete this parameter in your app if you're not using it!
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	loadContext: AppLoadContext,
+	_loadContext: AppLoadContext,
 ) {
 	let status = responseStatusCode;
-	try {
-		const body = await renderToReadableStream(
-			<RemixServer context={remixContext} url={request.url} />,
-			{
-				signal: request.signal,
-				onError(error: unknown) {
-					// Log streaming rendering errors from inside the shell
-					console.error(error);
-					status = 500;
-				},
+
+	const body = await renderToReadableStream(
+		<RemixServer context={remixContext} url={request.url} />,
+		{
+			signal: request.signal,
+			onError(error: unknown) {
+				// Log streaming rendering errors from inside the shell
+				console.error(error);
+				status = 500;
 			},
-		);
+		},
+	);
 
-		if (isbot(request.headers.get("user-agent") ?? "")) {
-			await body.allReady;
-		}
-
-		responseHeaders.set("Content-Type", "text/html");
-		return new Response(body, {
-			headers: responseHeaders,
-			status,
-		});
-	} finally {
-		await loadContext.prisma.$disconnect();
+	if (isbot(request.headers.get("user-agent") ?? "")) {
+		await body.allReady;
 	}
+
+	responseHeaders.set("Content-Type", "text/html");
+	return new Response(body, {
+		headers: responseHeaders,
+		status,
+	});
 }
