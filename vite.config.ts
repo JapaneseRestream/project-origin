@@ -4,6 +4,9 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 import { getLoadContext } from "./load-context";
 
 export default defineConfig({
+	ssr: {
+		noExternal: ["react-admin", "ra-core", "jsonexport"],
+	},
 	plugins: [
 		nodePolyfills({
 			include: [],
