@@ -5,11 +5,20 @@ compatibility_date = "2022-06-02"
 compatibility_flags = ["nodejs_compat"]
 upload_source_maps = true
 
-kv_namespaces = [
-	{ binding = "session_storage", id = "b0b800e360e7459f8f2f74d83ceeb732" },
-]
+[[kv_namespaces]]
+binding = "KV_SESSION_STORAGE"
+id = "b0b800e360e7459f8f2f74d83ceeb732"
 
 [[d1_databases]]
+binding = "DB"
+database_name = "dev-project-origin"
+database_id = "ae6b6b3d-7350-449d-9d29-b83c5a75fb8d"
+
+[[env.production.kv_namespaces]]
+binding = "KV_SESSION_STORAGE"
+id = "e88c92b83db94d7d9c1d7a8fec5108c6"
+
+[[env.production.d1_databases]]
 binding = "DB"
 database_name = "prod-project-origin"
 database_id = "a1f80a18-858e-4be5-adec-57848234f73d"
