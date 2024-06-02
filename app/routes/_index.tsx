@@ -11,7 +11,7 @@ export const loader = async ({
 	if (!user) {
 		return json(null);
 	}
-	return json({ name: user.displayName });
+	return json({ id: user.id });
 };
 
 export default function Index() {
@@ -20,7 +20,7 @@ export default function Index() {
 	return (
 		<div>
 			<h1>Welcome to Remix (with Vite and Cloudflare)</h1>
-			<div>{loaderData?.name}</div>
+			<div>{loaderData?.id}</div>
 			{loaderData ? (
 				<Form method="post" action="/sign-out">
 					<button type="submit">Sign out</button>

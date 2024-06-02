@@ -8,7 +8,6 @@ import type { Cloudflare } from "../../load-context";
 
 export interface User {
 	id: DiscordProfile["id"];
-	displayName: DiscordProfile["displayName"];
 	accessToken: string;
 	refreshToken?: string;
 }
@@ -37,7 +36,6 @@ export const createAuthenticator = (cloudflare: Cloudflare) => {
 		async (params): Promise<User> => {
 			return {
 				id: params.profile.id,
-				displayName: params.profile.displayName,
 				accessToken: params.accessToken,
 				refreshToken: params.refreshToken,
 			};
