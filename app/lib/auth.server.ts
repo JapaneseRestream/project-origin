@@ -20,7 +20,7 @@ export const createAuthenticator = (cloudflare: Cloudflare) => {
 			secrets: [cloudflare.env.SESSION_COOKIE_SECRET],
 			secure: cloudflare.env.CF_ENV !== "local",
 		}),
-		kv: cloudflare.env.session_storage,
+		kv: cloudflare.env.KV_SESSION_STORAGE,
 	});
 
 	const authenticator = new Authenticator<User>(sessionStorage);
