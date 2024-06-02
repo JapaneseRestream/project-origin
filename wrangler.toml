@@ -3,6 +3,10 @@
 name = "project-origin"
 compatibility_date = "2022-06-02"
 
+kv_namespaces = [
+	{ binding = "session_storage", id = "b0b800e360e7459f8f2f74d83ceeb732" },
+]
+
 [[d1_databases]]
 binding = "DB"
 database_name = "prod-project-origin"

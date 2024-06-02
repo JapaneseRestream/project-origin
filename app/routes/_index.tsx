@@ -1,35 +1,31 @@
-import type { MetaFunction } from "@remix-run/cloudflare";
+import { type LoaderFunctionArgs, json } from "@remix-run/cloudflare";
+import { Form, Link, useLoaderData } from "@remix-run/react";
 
-export const meta: MetaFunction = () => {
-	return [
-		{ title: "New Remix App" },
-		{
-			name: "description",
-			content: "Welcome to Remix! Using Vite and Cloudflare!",
-		},
-	];
+export const loader = async ({
+	request,
+	context: { authenticator },
+}: LoaderFunctionArgs) => {
+	const user = await authenticator.isAuthenticated(request);
+	if (!user) {
+		return json(null);
+	}
+	return json({ name: user.displayName });
 };
 
 export default function Index() {
+	const loaderData = useLoaderData<typeof loader>();
+
 	return (
-		<div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+		<div>
 			<h1>Welcome to Remix (with Vite and Cloudflare)</h1>
-			<ul>
-				<li>
-					<a
-						target="_blank"
-						href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/"
-						rel="noreferrer"
-					>
-						Cloudflare Pages Docs - Remix guide
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-						Remix Docs
-					</a>
-				</li>
-			</ul>
+			<div>{loaderData?.name}</div>
+			{loaderData ? (
+				<Form method="post" action="/sign-out">
+					<button type="submit">Sign out</button>
+				</Form>
+			) : (
+				<Link to="/sign-in">Sign in</Link>
+			)}
 		</div>
 	);
 }

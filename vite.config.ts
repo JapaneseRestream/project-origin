@@ -1,16 +1,11 @@
-import { PrismaD1 } from "@prisma/adapter-d1";
-import { PrismaClient } from "@prisma/client";
 import * as remix from "@remix-run/dev";
 import { defineConfig } from "vite";
+import { getLoadContext } from "./load-context";
 
 export default defineConfig({
 	plugins: [
 		remix.cloudflareDevProxyVitePlugin<Env, never>({
-			getLoadContext: ({ context }) => {
-				const { DB } = context.cloudflare.env;
-				const prisma = new PrismaClient({ adapter: new PrismaD1(DB) });
-				return { prisma, cloudflare: context.cloudflare };
-			},
+			getLoadContext,
 		}),
 		remix.vitePlugin({
 			future: {

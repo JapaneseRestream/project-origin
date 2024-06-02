@@ -26,4 +26,9 @@ export default tseslint.config(
 			"react-hooks/exhaustive-deps": "warn",
 		},
 	},
+	{
+		rules: {
+			"@typescript-eslint/only-throw-error": "off",
+		},
+	},
 );
