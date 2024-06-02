@@ -1,0 +1,16 @@
+name: PR develop to main
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  open_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          gh pr create --base main --head develop --title "merge develop into main" --body ""
+        env:
+          GH_TOKEN: ${{ github.token }}
