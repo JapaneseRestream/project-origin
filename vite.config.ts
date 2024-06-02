@@ -5,7 +5,7 @@ import { getLoadContext } from "./load-context";
 
 export default defineConfig({
 	ssr: {
-		noExternal: ["react-admin", "ra-core", "jsonexport"],
+		noExternal: ["react-admin", "ra-core", "ra-ui-materialui", "jsonexport"],
 	},
 	plugins: [
 		nodePolyfills({
