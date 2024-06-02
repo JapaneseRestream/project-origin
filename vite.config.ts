@@ -3,6 +3,12 @@ import { defineConfig } from "vite";
 import { getLoadContext } from "./load-context";
 
 export default defineConfig({
+	ssr: {
+		noExternal: ["react-admin", "ra-core", "ra-ui-materialui", "jsonexport"],
+	},
+	esbuild: {
+		target: "es2022",
+	},
 	plugins: [
 		remix.cloudflareDevProxyVitePlugin<Env, never>({
 			getLoadContext,

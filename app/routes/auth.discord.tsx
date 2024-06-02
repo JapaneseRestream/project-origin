@@ -1,8 +1,11 @@
-import type { ActionFunctionArgs } from "@remix-run/cloudflare";
+import { type ActionFunctionArgs, json } from "@remix-run/cloudflare";
+import { createAuthenticator } from "../lib/auth.server";
 
-export const action = ({
+export const action = async ({
 	request,
-	context: { authenticator },
+	context: { cloudflare },
 }: ActionFunctionArgs) => {
-	return authenticator.authenticate("discord", request);
+	const authenticator = createAuthenticator(cloudflare);
+	await authenticator.authenticate("discord", request);
+	return json(null);
 };
