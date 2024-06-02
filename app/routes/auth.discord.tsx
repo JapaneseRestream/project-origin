@@ -10,7 +10,8 @@ export const action = async ({
 		await authenticator.authenticate("discord", request);
 		return json(null);
 	} catch (error) {
-		console.trace(error);
+		console.error((error as Error).message);
+		console.error((error as Error).stack);
 		return json(null);
 	}
 };
