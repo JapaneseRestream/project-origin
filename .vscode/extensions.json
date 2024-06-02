@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"biomejs.biome",
+		"tamasfe.even-better-toml",
+		"prisma.prisma"
+	]
+}

@@ -1,29 +1,61 @@
+import type { MetaFunction } from "@remix-run/cloudflare";
 import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
+	Links,
+	Meta,
+	Outlet,
+	Scripts,
+	ScrollRestoration,
+	isRouteErrorResponse,
+	useRouteError,
 } from "@remix-run/react";
+import type { PropsWithChildren } from "react";
 
-export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
-}
+export const meta: MetaFunction = () => [
+	{ charSet: "utf-8" },
+	{ name: "viewport", content: "width=device-width, initial-scale=1" },
+];
 
-export default function App() {
-  return <Outlet />;
-}
+export const Layout = ({ children }: PropsWithChildren) => {
+	return (
+		<html lang="ja">
+			<head>
+				<Meta />
+				<Links />
+			</head>
+			<body>
+				{children}
+				<ScrollRestoration />
+				<Scripts />
+			</body>
+		</html>
+	);
+};
+
+export default () => {
+	return <Outlet />;
+};
+
+const normalizeErrorData = (errorData: unknown) => {
+	if (typeof errorData === "string") {
+		return errorData;
+	}
+	if (errorData instanceof Error) {
+		return errorData.message;
+	}
+	return JSON.stringify(errorData);
+};
+
+export const ErrorBoundary = () => {
+	const error = useRouteError();
+	if (!isRouteErrorResponse(error)) {
+		return normalizeErrorData(error);
+	}
+	return (
+		<>
+			<h1>
+				{error.status} {error.statusText}
+			</h1>
+			<p>{normalizeErrorData(error.data)}</p>
+		</>
+	);
+};

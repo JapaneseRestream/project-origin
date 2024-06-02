@@ -1,0 +1,9 @@
+#:schema node_modules/wrangler/config-schema.json
+
+name = "project-origin"
+compatibility_date = "2022-06-02"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "prod-project-origin"
+database_id = "a1f80a18-858e-4be5-adec-57848234f73d"
