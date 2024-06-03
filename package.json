@@ -4,6 +4,7 @@
 	"sideEffects": false,
 	"type": "module",
 	"scripts": {
+		"postinstall": "patch-package",
 		"build": "remix vite:build",
 		"deploy": "wrangler pages deploy",
 		"dev": "run-p dev:*",
@@ -21,6 +22,7 @@
 		"@remix-run/cloudflare-pages": "^2.9.2",
 		"@remix-run/react": "^2.9.2",
 		"isbot": "^5.1.8",
+		"patch-package": "^8.0.0",
 		"ra-data-simple-prisma": "^5.2.0",
 		"react-admin": "^4.16.18",
 		"remix-auth": "^3.7.0",
