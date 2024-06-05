@@ -4,7 +4,6 @@
 	"sideEffects": false,
 	"type": "module",
 	"scripts": {
-		"postinstall": "patch-package",
 		"build": "remix vite:build",
 		"deploy": "wrangler pages deploy",
 		"dev": "run-p dev:*",
@@ -51,5 +50,10 @@
 	"engines": {
 		"node": "^20.14.0",
 		"npm": "10"
+	},
+	"pnpm": {
+		"patchedDependencies": {
+			"jsonexport@3.2.0": "patches/jsonexport@3.2.0.patch"
+		}
 	}
 }
