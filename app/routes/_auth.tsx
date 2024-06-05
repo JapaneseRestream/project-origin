@@ -4,14 +4,12 @@ import {
 	json,
 	redirect,
 } from "@remix-run/cloudflare";
-import { createAuthenticator } from "../lib/auth.server";
 import { signInRedirectCookie } from "../lib/sign-in-redirect.server";
 
 const handler = async ({
 	request,
-	context: { cloudflare },
+	context: { authenticator },
 }: LoaderFunctionArgs | ActionFunctionArgs) => {
-	const authenticator = createAuthenticator(cloudflare);
 	const user = await authenticator.isAuthenticated(request);
 	if (user) {
 		return json(null);

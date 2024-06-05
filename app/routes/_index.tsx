@@ -1,12 +1,10 @@
 import { type LoaderFunctionArgs, json } from "@remix-run/cloudflare";
 import { Form, Link, useLoaderData } from "@remix-run/react";
-import { createAuthenticator } from "../lib/auth.server";
 
 export const loader = async ({
 	request,
-	context: { cloudflare },
+	context: { authenticator },
 }: LoaderFunctionArgs) => {
-	const authenticator = createAuthenticator(cloudflare);
 	const user = await authenticator.isAuthenticated(request);
 	if (!user) {
 		return json(null);

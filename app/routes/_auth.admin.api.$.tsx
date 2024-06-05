@@ -5,11 +5,10 @@ import {
 } from "@remix-run/cloudflare";
 import { type RaPayload, defaultHandler } from "ra-data-simple-prisma";
 import { z } from "zod";
-import { setupDb } from "../lib/prisma.server";
 
 export const resourceSchema = <
 	TResource extends string,
-	TMethod extends RaPayload["method"],
+	TMethod extends RaPayload["method"] ,
 >(
 	resource: TResource,
 	methods?: readonly [TMethod, ...TMethod[]],
@@ -29,11 +28,10 @@ const handlerSchema = z.union([
 
 const handler = async ({
 	request,
-	context: { cloudflare },
+	context: { prisma },
 }: LoaderFunctionArgs | ActionFunctionArgs) => {
-	const body = handlerSchema.parse(await request.json()) as RaPayload;
-	await using db = setupDb(cloudflare);
-	const result = await defaultHandler(body, db.prisma);
+	const body = handlerSchema.parse(await request.json());
+	const result = await defaultHandler(body as RaPayload, prisma);
 	return json(result);
 };
 

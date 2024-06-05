@@ -3,9 +3,6 @@ import { defineConfig } from "vite";
 import { getLoadContext } from "./load-context";
 
 export default defineConfig({
-	esbuild: {
-		target: "es2022",
-	},
 	plugins: [
 		remix.cloudflareDevProxyVitePlugin<Env, never>({
 			getLoadContext,
