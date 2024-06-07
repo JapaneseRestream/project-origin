@@ -3,13 +3,20 @@ import { Form, Link, useLoaderData } from "@remix-run/react";
 
 export const loader = async ({
 	request,
-	context: { authenticator },
+	context: { authenticator, prisma },
 }: LoaderFunctionArgs) => {
-	const user = await authenticator.isAuthenticated(request);
-	if (!user) {
+	const session = await authenticator.isAuthenticated(request);
+	if (!session) {
 		return json(null);
 	}
-	return json({ id: user.id });
+	const user = await prisma.users.findUnique({
+		where: { id: session.userId },
+		select: { displayName: true },
+	});
+	if (!user) {
+		throw new Response('user not found', {status: 404})
+	}
+	return json({ displayName: user.displayName });
 };
 
 export default function Index() {
@@ -17,7 +24,7 @@ export default function Index() {
 
 	return loaderData ? (
 		<>
-			<div>{loaderData.id}</div>
+			<div>Hello, {loaderData.displayName}</div>
 			<Form method="post" action="/sign-out">
 				<button type="submit">Sign out</button>
 			</Form>

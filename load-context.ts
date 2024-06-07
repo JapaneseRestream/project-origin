@@ -19,7 +19,7 @@ declare module "@remix-run/cloudflare" {
 }
 
 interface User {
-	id: string;
+	userId: string;
 }
 
 export const createAuthenticator = (
@@ -53,9 +53,7 @@ export const createAuthenticator = (
 				if (!user) {
 					throw new Error("user not found");
 				}
-				return {
-					id: user.id,
-				};
+				return { userId: user.id };
 			},
 		),
 		"discord",
@@ -78,7 +76,7 @@ export const createAuthenticator = (
 						},
 						select: { id: true },
 					});
-					return { id: user.id };
+					return { userId: user.id };
 				} catch (error) {
 					if (error instanceof Prisma.PrismaClientKnownRequestError) {
 						if (error.code === "P2002") {
