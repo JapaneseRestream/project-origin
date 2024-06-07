@@ -8,7 +8,7 @@ import { z } from "zod";
 
 export const resourceSchema = <
 	TResource extends string,
-	TMethod extends RaPayload["method"] ,
+	TMethod extends RaPayload["method"],
 >(
 	resource: TResource,
 	methods?: readonly [TMethod, ...TMethod[]],
@@ -30,8 +30,11 @@ const handler = async ({
 	request,
 	context: { prisma },
 }: LoaderFunctionArgs | ActionFunctionArgs) => {
-	const body = handlerSchema.parse(await request.json());
-	const result = await defaultHandler(body as RaPayload, prisma);
+	const parseResult = handlerSchema.safeParse(await request.json());
+	if (!parseResult.success) {
+		throw new Response(parseResult.error.message, { status: 400 });
+	}
+	const result = await defaultHandler(parseResult.data as RaPayload, prisma);
 	return json(result);
 };
 
