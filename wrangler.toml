@@ -11,7 +11,7 @@ id = "b0b800e360e7459f8f2f74d83ceeb732"
 [[d1_databases]]
 binding = "DB"
 database_name = "dev-project-origin"
-database_id = "ae6b6b3d-7350-449d-9d29-b83c5a75fb8d"
+database_id = "75ee34c3-dffd-4584-a81f-3f297073a685"
 
 [[env.production.kv_namespaces]]
 binding = "KV_SESSION_STORAGE"
