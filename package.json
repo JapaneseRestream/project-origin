@@ -4,6 +4,7 @@
 	"sideEffects": false,
 	"type": "module",
 	"scripts": {
+		"prepare": "prisma generate",
 		"build": "remix vite:build",
 		"deploy": "wrangler pages deploy",
 		"dev": "run-p dev:*",
