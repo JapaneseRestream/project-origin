@@ -15,22 +15,17 @@ export const loader = async ({
 export default function Index() {
 	const loaderData = useLoaderData<typeof loader>();
 
-	return (
-		<div>
-			<h1>Welcome to Remix (with Vite and Cloudflare)</h1>
-			{loaderData ? (
-				<>
-					<div>{loaderData.id}</div>
-					<Form method="post" action="/sign-out">
-						<button type="submit">Sign out</button>
-					</Form>
-				</>
-			) : (
-				<>
-					<Link to="/sign-in">Sign in</Link>
-					<Link to="/register">Register</Link>
-				</>
-			)}
-		</div>
+	return loaderData ? (
+		<>
+			<div>{loaderData.id}</div>
+			<Form method="post" action="/sign-out">
+				<button type="submit">Sign out</button>
+			</Form>
+		</>
+	) : (
+		<>
+			<Link to="/sign-in">Sign in</Link>
+			<Link to="/register">Register</Link>
+		</>
 	);
 }
