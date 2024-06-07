@@ -37,9 +37,15 @@ importers:
       ra-data-simple-prisma:
         specifier: ^5.2.0
         version: 5.2.0(@prisma/client@5.15.0(prisma@5.15.0))
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
       react-admin:
         specifier: ^4.16.18
         version: 4.16.18(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
       remix-auth:
         specifier: ^3.7.0
         version: 3.7.0(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@remix-run/server-runtime@2.9.2(typescript@5.4.5))
