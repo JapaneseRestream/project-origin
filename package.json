@@ -17,7 +17,7 @@
 	},
 	"dependencies": {
 		"@prisma/adapter-d1": "^5.14.0",
-		"@prisma/client": "^5.14.0",
+		"@prisma/client": "~5.14.0",
 		"@remix-run/cloudflare": "^2.9.2",
 		"@remix-run/cloudflare-pages": "^2.9.2",
 		"@remix-run/react": "^2.9.2",
