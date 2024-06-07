@@ -10,6 +10,9 @@ export const loader = async ({
 	)) as string | null;
 	return authenticator.authenticate("discord", request, {
 		successRedirect: signInRedirect ?? "/",
-		failureRedirect: "/sign-in",
 	});
+};
+
+export default () => {
+	return null;
 };

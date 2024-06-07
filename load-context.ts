@@ -42,9 +42,8 @@ export const createAuthenticator = (
 			{
 				clientID: cloudflare.env.DISCORD_CLIENT_ID,
 				clientSecret: cloudflare.env.DISCORD_CLIENT_SECRET,
-				callbackURL: "/auth/callback-discord",
+				callbackURL: "/sign-in/callback/discord",
 				scope: ["identify"],
-				prompt: "none",
 			},
 			async (params) => {
 				const user = await prisma.users.findUnique({
@@ -59,7 +58,7 @@ export const createAuthenticator = (
 				};
 			},
 		),
-		"discord-authentication",
+		"discord",
 	);
 
 	authenticator.use(
@@ -67,9 +66,8 @@ export const createAuthenticator = (
 			{
 				clientID: cloudflare.env.DISCORD_CLIENT_ID,
 				clientSecret: cloudflare.env.DISCORD_CLIENT_SECRET,
-				callbackURL: "/auth/callback-discord",
+				callbackURL: "/register/callback/discord",
 				scope: ["identify"],
-				prompt: "consent",
 			},
 			async (params) => {
 				try {

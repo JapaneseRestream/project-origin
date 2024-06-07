@@ -18,13 +18,18 @@ export default function Index() {
 	return (
 		<div>
 			<h1>Welcome to Remix (with Vite and Cloudflare)</h1>
-			<div>{loaderData?.id}</div>
 			{loaderData ? (
-				<Form method="post" action="/sign-out">
-					<button type="submit">Sign out</button>
-				</Form>
+				<>
+					<div>{loaderData.id}</div>
+					<Form method="post" action="/sign-out">
+						<button type="submit">Sign out</button>
+					</Form>
+				</>
 			) : (
-				<Link to="/sign-in">Sign in</Link>
+				<>
+					<Link to="/sign-in">Sign in</Link>
+					<Link to="/register">Register</Link>
+				</>
 			)}
 		</div>
 	);

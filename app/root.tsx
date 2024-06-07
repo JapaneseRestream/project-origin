@@ -39,7 +39,12 @@ const normalizeErrorData = (errorData: unknown) => {
 	if (typeof errorData === "string") {
 		return errorData;
 	}
-	if (errorData instanceof Error) {
+	if (
+		errorData &&
+		typeof errorData === "object" &&
+		"message" in errorData &&
+		typeof errorData.message === "string"
+	) {
 		return errorData.message;
 	}
 	return JSON.stringify(errorData);
