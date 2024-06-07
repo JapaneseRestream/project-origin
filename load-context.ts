@@ -1,5 +1,5 @@
 import { PrismaD1 } from "@prisma/adapter-d1";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Prisma } from "@prisma/client";
 import type { PlatformProxy } from "wrangler";
 import {
 	createCookie,
@@ -7,7 +7,6 @@ import {
 } from "@remix-run/cloudflare";
 import { Authenticator } from "remix-auth";
 import { DiscordStrategy } from "remix-auth-discord";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library.js";
 
 export type Cloudflare = Omit<PlatformProxy<Env>, "dispose">;
 
@@ -83,7 +82,7 @@ export const createAuthenticator = (
 					});
 					return { id: user.id };
 				} catch (error) {
-					if (error instanceof PrismaClientKnownRequestError) {
+					if (error instanceof Prisma.PrismaClientKnownRequestError) {
 						if (error.code === "P2002") {
 							throw new Error("user already exists");
 						}
