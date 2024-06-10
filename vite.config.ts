@@ -1,5 +1,6 @@
 import * as remix from "@remix-run/dev";
 import { defineConfig } from "vite";
+
 import { getLoadContext } from "./load-context";
 
 export default defineConfig({

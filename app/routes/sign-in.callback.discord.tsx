@@ -1,4 +1,5 @@
 import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
+
 import { signInRedirectCookie } from "../lib/sign-in-redirect.server";
 
 export const loader = async ({

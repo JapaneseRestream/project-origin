@@ -1,12 +1,13 @@
 import {
 	type ActionFunctionArgs,
-	type LoaderFunctionArgs,
 	json,
+	type LoaderFunctionArgs,
 } from "@remix-run/cloudflare";
-import { type RaPayload, defaultHandler } from "ra-data-simple-prisma";
+import { defaultHandler, type RaPayload } from "ra-data-simple-prisma";
+import { match, P } from "ts-pattern";
 import { z } from "zod";
+
 import { assertAdminSession } from "../lib/session.server";
-import { P, match } from "ts-pattern";
 
 const getMethods = [
 	"getList",

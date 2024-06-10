@@ -1,12 +1,12 @@
 import { PrismaD1 } from "@prisma/adapter-d1";
-import { PrismaClient, Prisma } from "@prisma/client";
-import type { PlatformProxy } from "wrangler";
+import { Prisma,PrismaClient } from "@prisma/client";
 import {
 	createCookie,
 	createWorkersKVSessionStorage,
 } from "@remix-run/cloudflare";
 import { Authenticator } from "remix-auth";
 import { DiscordStrategy } from "remix-auth-discord";
+import type { PlatformProxy } from "wrangler";
 
 export type Cloudflare = Omit<PlatformProxy<Env>, "dispose">;
 
