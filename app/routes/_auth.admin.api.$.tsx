@@ -6,25 +6,12 @@ import {
 import { type RaPayload, defaultHandler } from "ra-data-simple-prisma";
 import { z } from "zod";
 
-export const resourceSchema = <
-	TResource extends string,
-	TMethod extends RaPayload["method"],
->(
-	resource: TResource,
-	methods?: readonly [TMethod, ...TMethod[]],
-) => {
-	return z.object({
-		resource: z.literal(resource),
-		method: methods ? z.enum(methods) : z.string(),
-		params: z.unknown(),
-		model: z.string().optional(),
-	});
-};
-
-const handlerSchema = z.union([
-	resourceSchema("users", ["getList", "getOne"]),
-	resourceSchema("events"),
-]);
+const handlerSchema = z.object({
+	resource: z.string(),
+	method: z.string(),
+	params: z.any(),
+	model: z.string().optional(),
+});
 
 const handler = async ({
 	request,
