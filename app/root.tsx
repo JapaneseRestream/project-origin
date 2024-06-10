@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import {
 	Links,
 	Meta,
@@ -14,6 +14,8 @@ export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
 	{ name: "viewport", content: "width=device-width, initial-scale=1" },
 ];
+
+export const links: LinksFunction = () => [{ rel: "icon", href: "data:," }];
 
 export const Layout = ({ children }: PropsWithChildren) => {
 	return (
