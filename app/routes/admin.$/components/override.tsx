@@ -1,6 +1,9 @@
 import type { ComponentProps } from "react";
-import { BulkDeleteButton, Datagrid as RaDatagrid } from "react-admin";
-
+import {
+	BulkDeleteButton,
+	Datagrid as RaDatagrid,
+	Edit as RaEdit,
+} from "react-admin";
 
 export const Datagrid = (props: ComponentProps<typeof RaDatagrid>) => {
 	return (
@@ -9,4 +12,8 @@ export const Datagrid = (props: ComponentProps<typeof RaDatagrid>) => {
 			{...props}
 		/>
 	);
+};
+
+export const Edit = (props: ComponentProps<typeof RaEdit>) => {
+	return <RaEdit mutationMode="pessimistic" {...props} />;
 };

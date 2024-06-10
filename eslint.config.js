@@ -29,6 +29,7 @@ export default tseslint.config(
 	{
 		rules: {
 			"@typescript-eslint/only-throw-error": "off",
+			"@typescript-eslint/no-unused-vars": "off",
 		},
 	},
 );
