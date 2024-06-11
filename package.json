@@ -13,7 +13,8 @@
 		"lint": "eslint .",
 		"check-format": "prettier --check .",
 		"format": "prettier --write .",
-		"typegen": "wrangler types"
+		"typegen": "wrangler types",
+		"prepare": "prisma generate"
 	},
 	"dependencies": {
 		"@prisma/adapter-d1": "^5.14.0",
