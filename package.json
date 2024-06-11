@@ -50,8 +50,7 @@
 		"wrangler": "^3.58.0"
 	},
 	"engines": {
-		"node": "^20.14.0",
-		"npm": "10"
+		"node": "^20.14.0"
 	},
 	"pnpm": {
 		"patchedDependencies": {
