@@ -4,6 +4,9 @@ name = "project-origin"
 pages_build_output_dir = "./build/client"
 compatibility_date = "2024-06-02"
 
+[vars]
+SUPER_ADMIN_DISCORD_ID = "159600065017675778"
+
 [[kv_namespaces]]
 binding = "KV_SESSION_STORAGE"
 id = "b0b800e360e7459f8f2f74d83ceeb732"
@@ -12,6 +15,9 @@ id = "b0b800e360e7459f8f2f74d83ceeb732"
 binding = "DB"
 database_name = "dev-project-origin"
 database_id = "75ee34c3-dffd-4584-a81f-3f297073a685"
+
+[env.production.vars]
+SUPER_ADMIN_DISCORD_ID = "159600065017675778"
 
 [[env.production.kv_namespaces]]
 binding = "KV_SESSION_STORAGE"

@@ -31,6 +31,7 @@ export const createAuthenticator = (
 			sameSite: "lax",
 			secrets: [cloudflare.env.SESSION_COOKIE_SECRET],
 			secure: cloudflare.env.CF_ENV !== "local",
+			httpOnly: true,
 		}),
 		kv: cloudflare.env.KV_SESSION_STORAGE,
 	});
