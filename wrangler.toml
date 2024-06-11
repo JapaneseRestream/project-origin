@@ -6,6 +6,7 @@ compatibility_date = "2024-06-02"
 
 [vars]
 SUPER_ADMIN_DISCORD_ID = "159600065017675778"
+PNPM_VERSION = "9.3.0"
 
 [[kv_namespaces]]
 binding = "KV_SESSION_STORAGE"
