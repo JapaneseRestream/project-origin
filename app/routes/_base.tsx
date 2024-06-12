@@ -17,9 +17,7 @@ export default () => {
 			<div>
 				<Link to="/events">イベント一覧</Link>
 				{user ? (
-					<>
-						<SignOutButton />
-					</>
+					<SignOutButton />
 				) : (
 					<>
 						<Link to="/sign-in">ログイン</Link>

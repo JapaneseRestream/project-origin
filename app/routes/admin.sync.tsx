@@ -11,7 +11,8 @@ import { z } from "zod";
 import { gdqTracker } from "../lib/api/gdq-tracker";
 import { assertAdmin } from "../lib/session.server";
 
-export const loader = async ({ context }: LoaderFunctionArgs) => {
+export const loader = async ({ request, context }: LoaderFunctionArgs) => {
+	await assertAdmin(request, context);
 	const events = await context.prisma.events.findMany({
 		select: { id: true, name: true },
 		orderBy: { startsAt: "desc" },

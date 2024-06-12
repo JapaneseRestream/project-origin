@@ -6,10 +6,9 @@
 	"scripts": {
 		"build": "remix vite:build",
 		"deploy": "wrangler pages deploy",
-		"dev": "run-p dev:*",
+		"dev": "prisma generate && run-p dev:*",
 		"dev:remix": "remix vite:dev",
 		"dev:types": "tsc -b --watch --preserveWatchOutput",
-		"dev:prisma": "prisma generate --watch",
 		"lint": "eslint .",
 		"check-format": "prettier --check .",
 		"format": "prettier --write .",
