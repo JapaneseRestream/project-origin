@@ -1,8 +1,9 @@
 import { PrismaD1 } from "@prisma/adapter-d1";
-import { Prisma,PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 import {
 	createCookie,
 	createWorkersKVSessionStorage,
+	type SessionStorage,
 } from "@remix-run/cloudflare";
 import { Authenticator } from "remix-auth";
 import { DiscordStrategy } from "remix-auth-discord";
@@ -14,29 +15,28 @@ declare module "@remix-run/cloudflare" {
 	interface AppLoadContext {
 		cloudflare: Cloudflare;
 		prisma: PrismaClient;
-		authenticator: ReturnType<typeof createAuthenticator>;
+		sessionStorage: SessionStorage;
+		authenticator: Authenticator<SessionData>;
 	}
 }
 
-interface User {
+interface SessionData {
 	userId: string;
 }
 
-export const createAuthenticator = (
-	cloudflare: Cloudflare,
-	prisma: PrismaClient,
-) => {
-	const sessionStorage = createWorkersKVSessionStorage({
+const createAuthenticator = (cloudflare: Cloudflare, prisma: PrismaClient) => {
+	const sessionStorage = createWorkersKVSessionStorage<SessionData>({
 		cookie: createCookie("session", {
 			sameSite: "lax",
 			secrets: [cloudflare.env.SESSION_COOKIE_SECRET],
 			secure: cloudflare.env.CF_ENV !== "local",
 			httpOnly: true,
+			maxAge: 60 * 60 * 24 * 7,
 		}),
 		kv: cloudflare.env.KV_SESSION_STORAGE,
 	});
 
-	const authenticator = new Authenticator<User>(sessionStorage);
+	const authenticator = new Authenticator<SessionData>(sessionStorage);
 
 	authenticator.use(
 		new DiscordStrategy(
@@ -91,7 +91,7 @@ export const createAuthenticator = (
 		"discord-registration",
 	);
 
-	return authenticator;
+	return { sessionStorage, authenticator };
 };
 
 export const getLoadContext = ({
@@ -100,10 +100,14 @@ export const getLoadContext = ({
 	context: { cloudflare: Cloudflare };
 }) => {
 	const prisma = new PrismaClient({ adapter: new PrismaD1(cloudflare.env.DB) });
-	const authenticator = createAuthenticator(cloudflare, prisma);
+	const { authenticator, sessionStorage } = createAuthenticator(
+		cloudflare,
+		prisma,
+	);
 	return {
 		cloudflare,
 		prisma,
+		sessionStorage,
 		authenticator,
 	};
 };
