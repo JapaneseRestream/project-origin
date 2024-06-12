@@ -1,6 +1,6 @@
 import {
 	DateField,
-	DateInput,
+	DateTimeInput,
 	List,
 	ReferenceField,
 	ReferenceInput,
@@ -27,7 +27,6 @@ const RunsList = () => (
 		</Datagrid>
 	</List>
 );
-import {} from "react-admin";
 
 const RunsEdit = () => (
 	<Edit>
@@ -37,7 +36,7 @@ const RunsEdit = () => (
 			<TextInput source="translatedName" />
 			<TextInput source="category" />
 			<TextInput source="playedWith" />
-			<DateInput source="startsAt" />
+			<DateTimeInput source="startsAt" />
 		</SimpleForm>
 	</Edit>
 );

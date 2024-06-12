@@ -25,14 +25,14 @@ export default () => {
 
 	return (
 		<>
-			<h1>Archive</h1>
+			<h1>Schedule and Archive</h1>
 			{[...eventsByYear].map(([year, events]) => (
 				<section key={year}>
-					<h2>{year}</h2>
+					<h2>{year}年</h2>
 					<ul>
 						{events.map((event) => (
 							<li key={event.id}>
-								<Link to={`/archive/${event.shortName}`}>{event.name}</Link>
+								<Link to={`/events/${event.shortName}`}>{event.name}</Link>
 							</li>
 						))}
 					</ul>

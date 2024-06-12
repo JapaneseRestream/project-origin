@@ -23,15 +23,20 @@ export const loader = async ({
 export default function Index() {
 	const loaderData = useLoaderData<typeof loader>();
 
-	return loaderData ? (
+	return (
 		<>
-			<div>Hello, {loaderData.displayName}</div>
-			<SignOutButton />
-		</>
-	) : (
-		<>
-			<Link to="/sign-in">Sign in</Link>
-			<Link to="/register">Register</Link>
+			<Link to="events">イベント一覧</Link>
+			{loaderData ? (
+				<>
+					<div>Hello, {loaderData.displayName}</div>
+					<SignOutButton />
+				</>
+			) : (
+				<>
+					<Link to="/sign-in">ログイン</Link>
+					<Link to="/register">新規登録</Link>
+				</>
+			)}
 		</>
 	);
 }

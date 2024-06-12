@@ -1,8 +1,6 @@
 import {
 	BooleanField,
 	BooleanInput,
-	DateField,
-	DateInput,
 	List,
 	Resource,
 	SimpleForm,
@@ -18,8 +16,6 @@ const UsersList = () => (
 			<TextField source="discordId" />
 			<TextField source="displayName" />
 			<BooleanField source="isAdmin" />
-			<DateField source="createdAt" />
-			<DateField source="updatedAt" />
 		</Datagrid>
 	</List>
 );
@@ -30,8 +26,6 @@ const UsersEdit = () => (
 			<TextInput source="discordId" />
 			<TextInput source="displayName" />
 			<BooleanInput source="isAdmin" />
-			<DateInput source="createdAt" readOnly />
-			<DateInput source="updatedAt" readOnly />
 		</SimpleForm>
 	</Edit>
 );

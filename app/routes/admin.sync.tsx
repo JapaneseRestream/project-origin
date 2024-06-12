@@ -74,13 +74,16 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 	const newRunIds = new Set(runs.map((run) => run.id));
 	const existingRuns = await context.prisma.runs.findMany({
 		where: { eventId },
-		select: { id: true },
+		select: { id: true, syncExternalId: true },
 	});
+	const runsToDelete = existingRuns.filter(
+		(run) => !run.syncExternalId || !newRunIds.has(run.syncExternalId),
+	);
 
 	await Promise.all([
-		...existingRuns
-			.filter((run) => !newRunIds.has(run.id))
-			.map((run) => context.prisma.runs.delete({ where: { id: run.id } })),
+		...runsToDelete.map((run) =>
+			context.prisma.runs.delete({ where: { id: run.id } }),
+		),
 		...runs.map((run) =>
 			context.prisma.runs.upsert({
 				create: {
