@@ -1,8 +1,9 @@
-import type { ActionFunctionArgs } from "@remix-run/cloudflare";
+import { type ActionFunctionArgs } from "@remix-run/cloudflare";
 
 export const action = ({
 	request,
 	context: { authenticator },
 }: ActionFunctionArgs) => {
-	return authenticator.logout(request, { redirectTo: "/" });
+	const referer = request.headers.get("Referer");
+	return authenticator.logout(request, { redirectTo: referer ?? "/" });
 };

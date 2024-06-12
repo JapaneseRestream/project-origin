@@ -81,7 +81,13 @@ const createAuthenticator = (cloudflare: Cloudflare, prisma: PrismaClient) => {
 				} catch (error) {
 					if (error instanceof Prisma.PrismaClientKnownRequestError) {
 						if (error.code === "P2002") {
-							throw new Error("user already exists");
+							const user = await prisma.users.findUnique({
+								select: { id: true },
+								where: { discordId: params.profile.id },
+							});
+							if (user) {
+								return { userId: user.id };
+							}
 						}
 					}
 					throw error;
