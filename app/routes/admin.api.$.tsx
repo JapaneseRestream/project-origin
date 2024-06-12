@@ -7,7 +7,7 @@ import { defaultHandler, type RaPayload } from "ra-data-simple-prisma";
 import { match, P } from "ts-pattern";
 import { z } from "zod";
 
-import { assertAdminSession } from "../lib/session.server";
+import { assertAdmin } from "../lib/session.server";
 
 const getMethods = [
 	"getList",
@@ -36,7 +36,7 @@ const handler = async ({
 	context,
 }: LoaderFunctionArgs | ActionFunctionArgs) => {
 	const [user, payload] = await Promise.all([
-		assertAdminSession(request, context),
+		assertAdmin(request, context),
 		request.json(),
 	]);
 

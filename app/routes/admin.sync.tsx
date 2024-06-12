@@ -9,10 +9,10 @@ import { match, P } from "ts-pattern";
 import { z } from "zod";
 
 import { gdqTracker } from "../lib/api/gdq-tracker";
-import { assertAdminSession } from "../lib/session.server";
+import { assertAdmin } from "../lib/session.server";
 
 export const loader = async ({ request, context }: LoaderFunctionArgs) => {
-	await assertAdminSession(request, context);
+	await assertAdmin(request, context);
 	const events = await context.prisma.events.findMany({
 		select: { id: true, name: true },
 		orderBy: { startsAt: "desc" },
@@ -46,7 +46,7 @@ const actionSchema = z.object({ eventId: z.string().uuid() });
 
 export const action = async ({ request, context }: ActionFunctionArgs) => {
 	const [_, formData] = await Promise.all([
-		assertAdminSession(request, context),
+		assertAdmin(request, context),
 		request.formData(),
 	]);
 	const submission = parseWithZod(formData, { schema: actionSchema });

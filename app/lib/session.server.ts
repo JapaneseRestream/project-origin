@@ -1,9 +1,6 @@
 import { type AppLoadContext } from "@remix-run/cloudflare";
 
-export const assertSession = async (
-	request: Request,
-	context: AppLoadContext,
-) => {
+export const getUser = async (request: Request, context: AppLoadContext) => {
 	const session = await context.authenticator.isAuthenticated(request);
 	if (session) {
 		const user = await context.prisma.users.findUnique({
@@ -19,14 +16,22 @@ export const assertSession = async (
 			return user;
 		}
 	}
+	return null;
+};
+
+export const assertUser = async (request: Request, context: AppLoadContext) => {
+	const user = await getUser(request, context);
+	if (user) {
+		return user;
+	}
 	throw new Response("not found", { status: 404 });
 };
 
-export const assertAdminSession = async (
+export const assertAdmin = async (
 	request: Request,
 	context: AppLoadContext,
 ) => {
-	const user = await assertSession(request, context);
+	const user = await assertUser(request, context);
 	const superAdminDiscordIds =
 		context.cloudflare.env.SUPER_ADMIN_DISCORD_ID.split(",");
 	const isSuperAdmin = superAdminDiscordIds.includes(user.discordId);

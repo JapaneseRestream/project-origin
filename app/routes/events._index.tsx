@@ -1,5 +1,5 @@
-import { json, type LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { Link, useLoaderData } from "@remix-run/react";
+import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { json, Link, useLoaderData } from "@remix-run/react";
 
 export const loader = async ({ context }: LoaderFunctionArgs) => {
 	const events = await context.prisma.events.findMany({
