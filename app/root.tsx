@@ -85,7 +85,7 @@ export const ErrorBoundary = () => {
 			<h1>
 				{error.status} {error.statusText}
 			</h1>
-			<p>{normalizeErrorData(error.data)}</p>
+			<div>{normalizeErrorData(error.data)}</div>
 		</>
 	);
 };

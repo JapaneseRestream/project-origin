@@ -1,3 +1,4 @@
+import { Button } from "@radix-ui/themes";
 import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { Form } from "@remix-run/react";
 
@@ -22,7 +23,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 export default () => {
 	return (
 		<Form method="post" action="/sign-in/discord">
-			<button type="submit">Sign in with Discord</button>
+			<Button type="submit">Sign in with Discord</Button>
 		</Form>
 	);
 };

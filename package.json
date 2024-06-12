@@ -13,13 +13,14 @@
 		"check-format": "prettier --check .",
 		"format": "prettier --write .",
 		"typegen": "wrangler types",
-		"prepare": "prisma generate"
+		"prepare": "prisma generate && panda codegen"
 	},
 	"dependencies": {
 		"@conform-to/react": "^1.1.4",
 		"@conform-to/zod": "^1.1.4",
 		"@prisma/adapter-d1": "^5.15.0",
 		"@prisma/client": "^5.15.0",
+		"@radix-ui/themes": "^3.0.5",
 		"@remix-run/cloudflare": "^2.9.2",
 		"@remix-run/cloudflare-pages": "^2.9.2",
 		"@remix-run/react": "^2.9.2",
@@ -37,6 +38,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20240605.0",
 		"@eslint/js": "^9.4.0",
+		"@pandacss/dev": "^0.40.1",
 		"@remix-run/dev": "^2.9.2",
 		"@types/eslint__js": "^8.42.3",
 		"@types/react": "^18.3.3",

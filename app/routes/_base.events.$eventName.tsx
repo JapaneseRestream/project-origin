@@ -1,3 +1,4 @@
+import { Heading, Link, Table } from "@radix-ui/themes";
 import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { json, useLoaderData } from "@remix-run/react";
 
@@ -38,38 +39,41 @@ export default () => {
 
 	return (
 		<>
-			<h1>{event.name}</h1>
-			<table>
-				<thead>
-					<tr>
-						<th>開始時刻</th>
-						<th>タイトル</th>
-						<th>カテゴリ</th>
-						<th>機種</th>
-					</tr>
-				</thead>
-				<tbody>
+			<Heading size="9">{event.name}</Heading>
+			<Table.Root>
+				<Table.Header>
+					<Table.Row>
+						<Table.ColumnHeaderCell>開始時刻</Table.ColumnHeaderCell>
+						<Table.ColumnHeaderCell>タイトル</Table.ColumnHeaderCell>
+						<Table.ColumnHeaderCell>カテゴリ</Table.ColumnHeaderCell>
+						<Table.ColumnHeaderCell>機種</Table.ColumnHeaderCell>
+					</Table.Row>
+				</Table.Header>
+
+				<Table.Body>
 					{runs.map((run) => {
 						const name = run.translatedName ?? run.originalName;
 						return (
-							<tr key={run.id}>
-								<td>{new Date(run.startsAt).toLocaleString()}</td>
-								<td>
+							<Table.Row key={run.id}>
+								<Table.RowHeaderCell>
+									{new Date(run.startsAt).toLocaleString()}
+								</Table.RowHeaderCell>
+								<Table.Cell>
 									{run.vodUrl ? (
-										<a href={run.vodUrl} target="_blank" rel="noreferrer">
+										<Link href={run.vodUrl} target="_blank" rel="noreferrer">
 											{name}
-										</a>
+										</Link>
 									) : (
 										name
 									)}
-								</td>
-								<td>{run.category}</td>
-								<td>{run.playedWith}</td>
-							</tr>
+								</Table.Cell>
+								<Table.Cell>{run.category}</Table.Cell>
+								<Table.Cell>{run.playedWith}</Table.Cell>
+							</Table.Row>
 						);
 					})}
-				</tbody>
-			</table>
+				</Table.Body>
+			</Table.Root>
 		</>
 	);
 };

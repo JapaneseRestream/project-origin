@@ -1,5 +1,9 @@
+import { Heading } from "@radix-ui/themes";
 import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { json, Link, useLoaderData } from "@remix-run/react";
+import { json, useLoaderData } from "@remix-run/react";
+import { Fragment } from "react";
+
+import { Link } from "../components/link";
 
 export const loader = async ({ context }: LoaderFunctionArgs) => {
 	const events = await context.prisma.events.findMany({
@@ -25,10 +29,14 @@ export default () => {
 
 	return (
 		<>
-			<h1>Schedule and Archive</h1>
+			<Heading as="h1" size="9">
+				イベント一覧
+			</Heading>
 			{[...eventsByYear].map(([year, events]) => (
-				<section key={year}>
-					<h2>{year}年</h2>
+				<Fragment key={year}>
+					<Heading as="h2" size="8">
+						{year}年
+					</Heading>
 					<ul>
 						{events.map((event) => (
 							<li key={event.id}>
@@ -36,7 +44,7 @@ export default () => {
 							</li>
 						))}
 					</ul>
-				</section>
+				</Fragment>
 			))}
 		</>
 	);

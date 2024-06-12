@@ -1,3 +1,4 @@
+import { Button } from "@radix-ui/themes";
 import { useFetcher } from "@remix-run/react";
 
 export const SignOutButton = () => {
@@ -5,7 +6,7 @@ export const SignOutButton = () => {
 
 	return (
 		<fetcher.Form method="post" action="/sign-out">
-			<button type="submit">Sign out</button>
+			<Button type="submit">ログアウト</Button>
 		</fetcher.Form>
 	);
 };
