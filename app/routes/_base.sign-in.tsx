@@ -23,7 +23,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 export default () => {
 	return (
 		<Form method="post" action="/sign-in/discord">
-			<Button type="submit">Sign in with Discord</Button>
+			<Button type="submit">Discordでログイン</Button>
 		</Form>
 	);
 };
