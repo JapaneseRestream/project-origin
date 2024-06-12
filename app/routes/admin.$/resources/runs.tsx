@@ -8,6 +8,7 @@ import {
 	SimpleForm,
 	TextField,
 	TextInput,
+	UrlField,
 } from "react-admin";
 
 import { Datagrid, Edit } from "../components/override";
@@ -24,6 +25,7 @@ const RunsList = () => (
 			<TextField source="category" />
 			<TextField source="playedWith" />
 			<DateField source="startsAt" showTime />
+			<UrlField source="vodUrl" />
 		</Datagrid>
 	</List>
 );
@@ -37,6 +39,7 @@ const RunsEdit = () => (
 			<TextInput source="category" />
 			<TextInput source="playedWith" />
 			<DateTimeInput source="startsAt" />
+			<TextInput source="vodUrl" />
 		</SimpleForm>
 	</Edit>
 );

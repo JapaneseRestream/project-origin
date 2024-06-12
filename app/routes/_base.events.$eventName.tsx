@@ -18,6 +18,7 @@ export const loader = async ({
 				category: true,
 				playedWith: true,
 				startsAt: true,
+				vodUrl: true,
 			},
 			orderBy: { startsAt: "asc" },
 		}),
@@ -48,14 +49,25 @@ export default () => {
 					</tr>
 				</thead>
 				<tbody>
-					{runs.map((run) => (
-						<tr key={run.id}>
-							<td>{new Date(run.startsAt).toLocaleString()}</td>
-							<td>{run.translatedName ?? run.originalName}</td>
-							<td>{run.category}</td>
-							<td>{run.playedWith}</td>
-						</tr>
-					))}
+					{runs.map((run) => {
+						const name = run.translatedName ?? run.originalName;
+						return (
+							<tr key={run.id}>
+								<td>{new Date(run.startsAt).toLocaleString()}</td>
+								<td>
+									{run.vodUrl ? (
+										<a href={run.vodUrl} target="_blank" rel="noreferrer">
+											{name}
+										</a>
+									) : (
+										name
+									)}
+								</td>
+								<td>{run.category}</td>
+								<td>{run.playedWith}</td>
+							</tr>
+						);
+					})}
 				</tbody>
 			</table>
 		</>
