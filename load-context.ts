@@ -1,5 +1,5 @@
 import { PrismaD1 } from "@prisma/adapter-d1";
-import { Prisma, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import {
 	createCookie,
 	createWorkersKVSessionStorage,
@@ -69,29 +69,16 @@ const createAuthenticator = (cloudflare: Cloudflare, prisma: PrismaClient) => {
 				scope: ["identify"],
 			},
 			async (params) => {
-				try {
-					const user = await prisma.users.create({
-						data: {
-							discordId: params.profile.id,
-							displayName: params.profile.displayName,
-						},
-						select: { id: true },
-					});
-					return { userId: user.id };
-				} catch (error) {
-					if (error instanceof Prisma.PrismaClientKnownRequestError) {
-						if (error.code === "P2002") {
-							const user = await prisma.users.findUnique({
-								select: { id: true },
-								where: { discordId: params.profile.id },
-							});
-							if (user) {
-								return { userId: user.id };
-							}
-						}
-					}
-					throw error;
-				}
+				const user = await prisma.users.upsert({
+					create: {
+						discordId: params.profile.id,
+						displayName: params.profile.displayName,
+					},
+					update: {},
+					where: { discordId: params.profile.id },
+					select: { id: true },
+				});
+				return { userId: user.id };
 			},
 		),
 		"discord-registration",

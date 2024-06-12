@@ -19,3 +19,33 @@ model Users {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+model Events {
+  id             String   @id @default(uuid())
+  name           String
+  shortName      String   @unique
+  startsAt       DateTime
+  syncMethod     String
+  syncExternalId String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  Runs Runs[]
+}
+
+model Runs {
+  id             String   @id @default(uuid())
+  eventId        String
+  originalName   String
+  translatedName String?
+  category       String?
+  playedWith     String?
+  startsAt       DateTime
+  syncExternalId String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  event Events @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, syncExternalId])
+}

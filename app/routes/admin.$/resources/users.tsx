@@ -14,8 +14,7 @@ import { Datagrid, Edit } from "../components/override";
 
 const UsersList = () => (
 	<List>
-		<Datagrid rowClick="edit">
-			<TextField source="id" />
+		<Datagrid>
 			<TextField source="discordId" />
 			<TextField source="displayName" />
 			<BooleanField source="isAdmin" />
@@ -28,7 +27,6 @@ const UsersList = () => (
 const UsersEdit = () => (
 	<Edit>
 		<SimpleForm>
-			<TextInput source="id" readOnly />
 			<TextInput source="discordId" />
 			<TextInput source="displayName" />
 			<BooleanInput source="isAdmin" />

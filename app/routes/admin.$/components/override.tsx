@@ -9,6 +9,7 @@ export const Datagrid = (props: ComponentProps<typeof RaDatagrid>) => {
 	return (
 		<RaDatagrid
 			bulkActionButtons={<BulkDeleteButton mutationMode="pessimistic" />}
+			rowClick="edit"
 			{...props}
 		/>
 	);
