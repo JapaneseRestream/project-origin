@@ -1,4 +1,4 @@
-import { type AppLoadContext } from "@remix-run/cloudflare";
+import { type AppLoadContext, redirect } from "@remix-run/cloudflare";
 
 export const getUser = async (request: Request, context: AppLoadContext) => {
 	const session = await context.authenticator.isAuthenticated(request);
@@ -25,6 +25,17 @@ export const assertUser = async (request: Request, context: AppLoadContext) => {
 		return user;
 	}
 	throw new Response("not found", { status: 404 });
+};
+
+export const assertNoUser = async (
+	request: Request,
+	context: AppLoadContext,
+) => {
+	const user = await getUser(request, context);
+	if (!user) {
+		return;
+	}
+	throw redirect("/");
 };
 
 export const assertAdmin = async (

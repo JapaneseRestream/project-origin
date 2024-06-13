@@ -2,9 +2,12 @@ import { Button } from "@radix-ui/themes";
 import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { Form } from "@remix-run/react";
 
+import { css } from "../../styled-system/css";
+import { assertNoUser } from "../lib/session.server";
 import { signInRedirectCookie } from "../lib/sign-in-redirect.server";
 
-export const loader = async ({ request }: LoaderFunctionArgs) => {
+export const loader = async ({ request, context }: LoaderFunctionArgs) => {
+	await assertNoUser(request, context);
 	const referer = request.headers.get("Referer");
 	if (!referer) {
 		return new Response(null);
@@ -22,8 +25,10 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export default () => {
 	return (
-		<Form method="post" action="/sign-in/discord">
-			<Button type="submit">Discordでログイン</Button>
-		</Form>
+		<div className={css({ display: "grid", placeItems: "center" })}>
+			<Form method="post" action="/sign-in/discord">
+				<Button type="submit">Discordでログイン</Button>
+			</Form>
+		</div>
 	);
 };

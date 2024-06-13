@@ -5,7 +5,15 @@ export const SignOutButton = () => {
 	const fetcher = useFetcher();
 
 	return (
-		<fetcher.Form method="post" action="/sign-out">
+		<fetcher.Form
+			method="post"
+			action="/sign-out"
+			onSubmit={(event) => {
+				if (!confirm("本当にログアウトしますか?")) {
+					event.preventDefault();
+				}
+			}}
+		>
 			<Button type="submit">ログアウト</Button>
 		</fetcher.Form>
 	);

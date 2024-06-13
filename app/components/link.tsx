@@ -9,3 +9,5 @@ export const Link = (props: ComponentProps<typeof RemixLink>) => {
 		</RadixLink>
 	);
 };
+
+export { RadixLink, RemixLink };
