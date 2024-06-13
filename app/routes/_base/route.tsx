@@ -4,13 +4,13 @@ import { Button, Heading, TabNav, Theme } from "@radix-ui/themes";
 import { json, type LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
 	Outlet,
+	useFetcher,
 	useLoaderData,
 	useLocation,
 } from "@remix-run/react";
 
 import { css } from "../../../styled-system/css";
-import { Link, RemixLink } from "../../components/link";
-import { SignOutButton } from "../../components/sign-out-button";
+import { ButtonLink, Link, RemixLink } from "../../components/link";
 import { getUser } from "../../lib/session.server";
 
 export const loader = async ({ request, context }: LoaderFunctionArgs) => {
@@ -18,11 +18,26 @@ export const loader = async ({ request, context }: LoaderFunctionArgs) => {
 	return json({ user });
 };
 
+const SignOutButton = () => {
+	const fetcher = useFetcher();
+
+	return (
+		<fetcher.Form
+			method="post"
+			action="/sign-out"
+			onSubmit={(event) => {
+				if (!confirm("本当にログアウトしますか?")) {
+					event.preventDefault();
+				}
+			}}
+		>
+			<Button type="submit">ログアウト</Button>
+		</fetcher.Form>
+	);
+};
+
 const SignInOut = () => {
 	const { user } = useLoaderData<typeof loader>();
-	if (user) {
-		return <SignOutButton />;
-	}
 	return (
 		<div
 			className={css({
@@ -31,12 +46,17 @@ const SignInOut = () => {
 				gridTemplateColumns: "auto auto",
 			})}
 		>
-			<Button asChild>
-				<RemixLink to="/sign-in">ログイン</RemixLink>
-			</Button>
-			<Button asChild>
-				<RemixLink to="/register">新規登録</RemixLink>
-			</Button>
+			{user ? (
+				<>
+					<ButtonLink to="/profile">プロフィール</ButtonLink>
+					<SignOutButton />
+				</>
+			) : (
+				<>
+					<ButtonLink to="/sign-in">ログイン</ButtonLink>
+					<ButtonLink to="/register">新規登録</ButtonLink>
+				</>
+			)}
 		</div>
 	);
 };
@@ -48,6 +68,7 @@ const Header = () => {
 			className={css({
 				position: "sticky",
 				top: 0,
+				zIndex: 10,
 				backgroundColor: "white",
 				padding: 2,
 				display: "grid",
