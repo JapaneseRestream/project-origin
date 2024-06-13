@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import { Button, Heading, TabNav, Theme } from "@radix-ui/themes";
+import { Button, Heading, Theme } from "@radix-ui/themes";
 import { json, type LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
 	Outlet,
@@ -63,7 +63,6 @@ const SignInOut = () => {
 };
 
 const Header = () => {
-	const { pathname } = useLocation();
 	return (
 		<header
 			className={css({
@@ -71,22 +70,18 @@ const Header = () => {
 				top: 0,
 				zIndex: 10,
 				padding: 2,
-				display: "grid",
-				gridTemplateColumns: "auto 1fr auto",
+				display: "flex",
+				flexFlow: "row nowrap",
 				gap: 2,
 				alignItems: "center",
 				backgroundColor: "var(--color-background)",
 			})}
 		>
-			<Heading as="h1" size={{ initial: "4", lg: "6" }}>
+			<Heading as="h1" size="4" className={css({hideBelow: 'sm'})}>
 				<RemixLink to="/">Japanese Restream</RemixLink>
 			</Heading>
-			<div className={css({ justifySelf: "start" })}>
-				<TabNav.Root>
-					<TabNav.Link asChild active={pathname.startsWith("/events")}>
-						<Link to="/events">イベント一覧</Link>
-					</TabNav.Link>
-				</TabNav.Root>
+			<div className={css({ flexGrow: "2" })}>
+				<Link to="/events">イベント一覧</Link>
 			</div>
 			<SignInOut />
 		</header>
