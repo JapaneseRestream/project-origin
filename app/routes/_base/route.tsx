@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import { Button, Heading, TabNav, Theme } from "@radix-ui/themes";
+import { Box, Button, Heading, TabNav, Theme } from "@radix-ui/themes";
 import { json, type LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
 	Outlet,
@@ -8,6 +8,7 @@ import {
 	useLoaderData,
 	useLocation,
 } from "@remix-run/react";
+import { ThemeProvider } from "next-themes";
 
 import { css } from "../../../styled-system/css";
 import { ButtonLink, Link, RemixLink } from "../../components/link";
@@ -69,25 +70,30 @@ const Header = () => {
 				position: "sticky",
 				top: 0,
 				zIndex: 10,
-				backgroundColor: "white",
-				padding: 2,
-				display: "grid",
-				gridTemplateColumns: "auto 1fr auto",
-				gap: 2,
-				alignItems: "center",
 			})}
 		>
-			<Heading as="h1" size="5">
-				<RemixLink to="/">Japanese Restream</RemixLink>
-			</Heading>
-			<div className={css({ justifySelf: "start" })}>
-				<TabNav.Root>
-					<TabNav.Link asChild active={pathname.startsWith("/events")}>
-						<Link to="/events">イベント一覧</Link>
-					</TabNav.Link>
-				</TabNav.Root>
-			</div>
-			<SignInOut />
+			<Box
+				className={css({
+					padding: 2,
+					display: "grid",
+					gridTemplateColumns: "auto 1fr auto",
+					gap: 2,
+					alignItems: "center",
+					backgroundColor: "var(--color-background)",
+				})}
+			>
+				<Heading as="h1" size={{ initial: "4", lg: "6" }}>
+					<RemixLink to="/">Japanese Restream</RemixLink>
+				</Heading>
+				<div className={css({ justifySelf: "start" })}>
+					<TabNav.Root>
+						<TabNav.Link asChild active={pathname.startsWith("/events")}>
+							<Link to="/events">イベント一覧</Link>
+						</TabNav.Link>
+					</TabNav.Root>
+				</div>
+				<SignInOut />
+			</Box>
 		</header>
 	);
 };
@@ -103,8 +109,10 @@ const App = () => {
 
 export default () => {
 	return (
-		<Theme>
-			<App />
-		</Theme>
+		<ThemeProvider attribute="class">
+			<Theme>
+				<App />
+			</Theme>
+		</ThemeProvider>
 	);
 };

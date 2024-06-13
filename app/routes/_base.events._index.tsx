@@ -29,12 +29,12 @@ export default () => {
 
 	return (
 		<>
-			<Heading as="h1" size="9">
+			<Heading as="h2" size="9">
 				イベント一覧
 			</Heading>
 			{[...eventsByYear].map(([year, events]) => (
 				<Fragment key={year}>
-					<Heading as="h2" size="8">
+					<Heading as="h3" size="8">
 						{year}年
 					</Heading>
 					<ul>

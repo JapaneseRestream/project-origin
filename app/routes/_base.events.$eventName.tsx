@@ -39,7 +39,7 @@ export default () => {
 
 	return (
 		<>
-			<Heading size="9">{event.name}</Heading>
+			<Heading as="h2" size="9">{event.name}</Heading>
 			<Table.Root>
 				<Table.Header>
 					<Table.Row>
