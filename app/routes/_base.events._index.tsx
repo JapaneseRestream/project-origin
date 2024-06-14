@@ -18,7 +18,7 @@ export default () => {
 
 	const eventsByYear = new Map<number, typeof events>();
 	for (const event of events) {
-		const year = new Date(event.startsAt).getFullYear();
+		const year = event.startsAt ? new Date(event.startsAt).getFullYear() : -1;
 		const existingEvents = eventsByYear.get(year);
 		if (existingEvents) {
 			existingEvents.push(event);
@@ -32,20 +32,22 @@ export default () => {
 			<Heading as="h2" size="9">
 				イベント一覧
 			</Heading>
-			{[...eventsByYear].map(([year, events]) => (
-				<Fragment key={year}>
-					<Heading as="h3" size="8">
-						{year}年
-					</Heading>
-					<ul>
-						{events.map((event) => (
-							<li key={event.id}>
-								<Link to={`/events/${event.shortName}`}>{event.name}</Link>
-							</li>
-						))}
-					</ul>
-				</Fragment>
-			))}
+			{[...eventsByYear]
+				.sort((a, b) => b[0] - a[0])
+				.map(([year, events]) => (
+					<Fragment key={year}>
+						<Heading as="h3" size="8">
+							{year === -1 ? "不明" : `${year.toFixed()}年`}
+						</Heading>
+						<ul>
+							{events.map((event) => (
+								<li key={event.id}>
+									<Link to={`/events/${event.shortName}`}>{event.name}</Link>
+								</li>
+							))}
+						</ul>
+					</Fragment>
+				))}
 		</>
 	);
 };

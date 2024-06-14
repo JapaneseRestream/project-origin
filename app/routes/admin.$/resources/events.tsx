@@ -2,7 +2,6 @@ import { useFetcher } from "@remix-run/react";
 import {
 	DateField,
 	DateTimeInput,
-	List,
 	Resource,
 	SelectInput,
 	SimpleForm,
@@ -12,7 +11,7 @@ import {
 } from "react-admin";
 
 import { syncOptions } from "../../../lib/api/sync-options";
-import { Create, Datagrid, Edit } from "../components/override";
+import { Create, Datagrid, Edit, List } from "../components/override";
 
 const EventsList = () => {
 	return (
@@ -31,6 +30,8 @@ const EventsList = () => {
 const syncMethodChoices = [
 	{ id: syncOptions.gdqTracker, name: "GDQ Tracker" },
 	{ id: syncOptions.rpglbTracker, name: "RPGLB Tracker" },
+	{ id: syncOptions.esaHoraro, name: "ESA Horaro" },
+	{ id: "none", name: "None" },
 ];
 
 const EventsCreate = () => {
@@ -39,7 +40,6 @@ const EventsCreate = () => {
 			<SimpleForm>
 				<TextInput source="name" required />
 				<TextInput source="shortName" required />
-				<DateTimeInput source="startsAt" required />
 				<SelectInput source="syncMethod" choices={syncMethodChoices} required />
 				<TextInput source="syncExternalId" />
 			</SimpleForm>

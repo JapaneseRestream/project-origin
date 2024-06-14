@@ -3,6 +3,7 @@ import { type ActionFunctionArgs, json } from "@remix-run/cloudflare";
 import { match, P } from "ts-pattern";
 import { z } from "zod";
 
+import { esaHoraro } from "../lib/api/esa-horaro";
 import { gdqTracker } from "../lib/api/gdq-tracker";
 import { rpglbTracker } from "../lib/api/rpglb-tracker";
 import { syncOptions } from "../lib/api/sync-options";
@@ -38,6 +39,10 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 			{ syncMethod: syncOptions.rpglbTracker, syncExternalId: P.string },
 			async (event) => rpglbTracker(event.syncExternalId),
 		)
+		.with(
+			{ syncMethod: syncOptions.esaHoraro, syncExternalId: P.string },
+			async (event) => esaHoraro(event.syncExternalId),
+		)
 		.otherwise(() => {
 			throw new Response("unsupported sync method", { status: 400 });
 		});
@@ -50,6 +55,12 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 	const runsToDelete = existingRuns.filter(
 		(run) => !run.syncExternalId || !newRunIds.has(run.syncExternalId),
 	);
+	let startsAt: Date | undefined;
+	for (const run of runs) {
+		if (!startsAt || run.startsAt < startsAt) {
+			startsAt = run.startsAt;
+		}
+	}
 
 	await Promise.all([
 		...runsToDelete.map((run) =>
@@ -74,6 +85,10 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 				},
 			}),
 		),
+		context.prisma.events.update({
+			where: { id: eventId },
+			data: { startsAt },
+		}),
 	]);
 
 	return json(null);

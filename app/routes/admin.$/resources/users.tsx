@@ -1,14 +1,13 @@
 import {
 	BooleanField,
 	BooleanInput,
-	List,
 	Resource,
 	SimpleForm,
 	TextField,
 	TextInput,
 } from "react-admin";
 
-import { Datagrid, Edit } from "../components/override";
+import { Datagrid, Edit, List } from "../components/override";
 
 const UsersList = () => (
 	<List>

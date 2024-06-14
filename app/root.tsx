@@ -21,7 +21,9 @@ export const meta: MetaFunction = () => [
 	{ name: "viewport", content: "width=device-width, initial-scale=1" },
 ];
 
-export const links: LinksFunction = () => [{ rel: "icon", href: "data:," }];
+export const links: LinksFunction = () => [
+	{ rel: "icon", href: "/favicon.ico" },
+];
 
 export const loader = async ({ request, context }: LoaderFunctionArgs) => {
 	const cookieHeader = request.headers.get("Cookie");
@@ -44,6 +46,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
 	return (
 		<html lang="ja">
 			<head>
+				<title>Japanese Restream</title>
 				<Meta />
 				<Links />
 			</head>
