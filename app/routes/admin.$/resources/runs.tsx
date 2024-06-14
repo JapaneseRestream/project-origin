@@ -1,7 +1,6 @@
 import {
 	DateField,
 	DateTimeInput,
-	List,
 	ReferenceField,
 	ReferenceInput,
 	Resource,
@@ -11,11 +10,10 @@ import {
 	UrlField,
 } from "react-admin";
 
-import { Datagrid, Edit } from "../components/override";
+import { Datagrid, Edit, List } from "../components/override";
 
 const RunsList = () => (
 	<List
-		perPage={50}
 		filters={[<ReferenceInput source="eventId" reference="events" />]}
 	>
 		<Datagrid sort={{ field: "startsAt", order: "ASC" }}>
