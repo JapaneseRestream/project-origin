@@ -46,6 +46,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
 	return (
 		<html lang="ja">
 			<head>
+				<title>Japanese Restream</title>
 				<Meta />
 				<Links />
 			</head>
