@@ -21,9 +21,7 @@ export const meta: MetaFunction = () => [
 	{ name: "viewport", content: "width=device-width, initial-scale=1" },
 ];
 
-export const links: LinksFunction = () => [
-	{ rel: "icon", href: "/favicon.ico" },
-];
+export const links: LinksFunction = () => [];
 
 export const loader = async ({ request, context }: LoaderFunctionArgs) => {
 	const cookieHeader = request.headers.get("Cookie");
