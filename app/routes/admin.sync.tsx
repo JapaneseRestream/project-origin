@@ -3,6 +3,7 @@ import { type ActionFunctionArgs, json } from "@remix-run/cloudflare";
 import { match, P } from "ts-pattern";
 import { z } from "zod";
 
+import { esaHoraro } from "../lib/api/esa-horaro";
 import { gdqTracker } from "../lib/api/gdq-tracker";
 import { rpglbTracker } from "../lib/api/rpglb-tracker";
 import { syncOptions } from "../lib/api/sync-options";
@@ -37,6 +38,10 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 		.with(
 			{ syncMethod: syncOptions.rpglbTracker, syncExternalId: P.string },
 			async (event) => rpglbTracker(event.syncExternalId),
+		)
+		.with(
+			{ syncMethod: syncOptions.esaHoraro, syncExternalId: P.string },
+			async (event) => esaHoraro(event.syncExternalId),
 		)
 		.otherwise(() => {
 			throw new Response("unsupported sync method", { status: 400 });

@@ -1,0 +1,2439 @@
+{
+	"data": {
+		"id": "1d11cdbel357987af0",
+		"name": "2019 (Stream One)",
+		"slug": "2019-one",
+		"timezone": "Europe/Berlin",
+		"start": "2019-07-20T14:00:00+02:00",
+		"start_t": 1563624000,
+		"website": "https://esamarathon.com/",
+		"twitter": "esamarathon",
+		"twitch": "esamarathon",
+		"description": "ESA Summer 2019 is a speedrunning centred community meet-up and marathon. The doors of the event area at the Quality Hotel View in Malmö are open from Friday the 19th of July until Sunday the 28th of July.\r\n\r\nFor quick reference, you may be most interested in the following links:   \r\n[Master Info Post](https://esamarathon.com/news/f9a15baf-3c7d-439b-ad85-148b640f45a1)  \r\n[Stream Two Schedule](https://horaro.org/esa/2019-two)\r\n\r\nSETUP Games: These are buffer blocks that give us an opportunity to tackle delays. The games will be played in their specified timeslot if the marathon is not too far behind the original schedule at that point. If we are, they will be pushed to the last day of the 2nd stream. Decisions will be made several hours before the run is scheduled. That means all SETUP Games will definitely get shown.",
+		"setup": "PT10M",
+		"setup_t": 600,
+		"updated": "2019-11-15T21:13:30Z",
+		"hidden_columns": ["Layout", "Info", "ID"],
+		"link": "https://horaro.org/esa/2019-one",
+		"columns": [
+			"Game",
+			"Player(s)",
+			"Platform",
+			"Category",
+			"Note",
+			"Layout",
+			"Info",
+			"ID"
+		],
+		"items": [
+			{
+				"length": "PT40M",
+				"length_t": 2400,
+				"scheduled": "2019-07-20T14:00:00+02:00",
+				"scheduled_t": 1563624000,
+				"data": [
+					"Marbles On Stream",
+					"360Chrism",
+					"PC",
+					"Viewer Races",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-20T14:50:00+02:00",
+				"scheduled_t": 1563627000,
+				"data": [
+					"Perfect Dark",
+					"ThaRixer",
+					"N64",
+					"Any% (Agent)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT50M",
+				"length_t": 3000,
+				"scheduled": "2019-07-20T15:35:00+02:00",
+				"scheduled_t": 1563629700,
+				"data": [
+					"Banjo-Tooie",
+					"Xafication",
+					"N64",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H10M",
+				"length_t": 4200,
+				"scheduled": "2019-07-20T16:35:00+02:00",
+				"scheduled_t": 1563633300,
+				"data": [
+					"Guacamelee! 2",
+					"Chfou",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT45M",
+				"length_t": 2700,
+				"scheduled": "2019-07-20T17:55:00+02:00",
+				"scheduled_t": 1563638100,
+				"data": [
+					"Freedom Planet",
+					"Revolucion",
+					"PC",
+					"Lilac",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT45M",
+				"length_t": 2700,
+				"scheduled": "2019-07-20T18:50:00+02:00",
+				"scheduled_t": 1563641400,
+				"data": [
+					"Kirby: Nightmare in Dreamland",
+					"Kinnin11",
+					"GBP",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT24M",
+				"length_t": 1440,
+				"scheduled": "2019-07-20T19:45:00+02:00",
+				"scheduled_t": 1563644700,
+				"data": [
+					"Mamono Hunter Yohko",
+					"btrim vs. TheMotherBrain86 vs. JkL87",
+					"Genesis",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT25M",
+				"length_t": 1500,
+				"scheduled": "2019-07-20T20:19:00+02:00",
+				"scheduled_t": 1563646740,
+				"data": [
+					"Chip \u0027n Dale: Rescue Rangers 2",
+					"Kaadzik",
+					"NES",
+					"Any% (One Player)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT10M",
+				"length_t": 600,
+				"scheduled": "2019-07-20T20:54:00+02:00",
+				"scheduled_t": 1563648840,
+				"data": [
+					"Solstice: Quest for the Staff of Demnos",
+					"Jokaah vs. Niss3 vs. EndySWE",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT22M",
+				"length_t": 1320,
+				"scheduled": "2019-07-20T21:14:00+02:00",
+				"scheduled_t": 1563650040,
+				"data": [
+					"Bionic Commando",
+					"duckfist",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-20T21:46:00+02:00",
+				"scheduled_t": 1563651960,
+				"data": [
+					"Blaster Master",
+					"BigJon",
+					"NES",
+					"Any% JP (150% Game Speed)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-20T22:31:00+02:00",
+				"scheduled_t": 1563654660,
+				"data": [
+					"Touhou Luna Nights",
+					"snapcase_ vs. DrimFox",
+					"PC",
+					"Any% (No Major Skips)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-20T23:16:00+02:00",
+				"scheduled_t": 1563657360,
+				"data": [
+					"Touhou: Scarlet Curiosity",
+					"Naro",
+					"PC",
+					"Remilia All Bosses",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT25M",
+				"length_t": 1500,
+				"scheduled": "2019-07-21T00:01:00+02:00",
+				"scheduled_t": 1563660060,
+				"data": [
+					"Katana Zero",
+					"Kainalo vs. yisk",
+					"PC",
+					"All Stages",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-21T00:36:00+02:00",
+				"scheduled_t": 1563662160,
+				"data": [
+					"Hotline Miami",
+					"Jackintoshh",
+					"PC",
+					"All Levels",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H10M",
+				"length_t": 4200,
+				"scheduled": "2019-07-21T01:16:00+02:00",
+				"scheduled_t": 1563664560,
+				"data": ["SOMA", "ItsTrigger", "PC", "Any%", null, null, null, null],
+				"options": null
+			},
+			{
+				"length": "PT50M",
+				"length_t": 3000,
+				"scheduled": "2019-07-21T02:36:00+02:00",
+				"scheduled_t": 1563669360,
+				"data": [
+					"Silent Hill 2",
+					"Punchi",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H30M",
+				"length_t": 5400,
+				"scheduled": "2019-07-21T03:36:00+02:00",
+				"scheduled_t": 1563672960,
+				"data": [
+					"Devil May Cry 4: Special Edition",
+					"Mekarazium",
+					"PC",
+					"Nero/Dante NG Devil Hunter",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H",
+				"length_t": 7200,
+				"scheduled": "2019-07-21T05:16:00+02:00",
+				"scheduled_t": 1563678960,
+				"data": [
+					"Stardew Valley",
+					"Jazzy, Venomynous",
+					"PC",
+					"Pantry (Glitchless, Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H10M",
+				"length_t": 4200,
+				"scheduled": "2019-07-21T07:26:00+02:00",
+				"scheduled_t": 1563686760,
+				"data": [
+					"Pikmin",
+					"Mokaygee",
+					"GCN",
+					"All Parts",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H25M",
+				"length_t": 5100,
+				"scheduled": "2019-07-21T08:46:00+02:00",
+				"scheduled_t": 1563691560,
+				"data": [
+					"BattleBlock Theater",
+					"GameguySD",
+					"PC",
+					"Any% (No Level Skips, Insane)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-21T10:21:00+02:00",
+				"scheduled_t": 1563697260,
+				"data": [
+					"Minecraft: Java Edition",
+					"Joshimuz vs. Trollbear666",
+					"PC",
+					"Bingo (Single, Medium)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT40M",
+				"length_t": 2400,
+				"scheduled": "2019-07-21T11:31:00+02:00",
+				"scheduled_t": 1563701460,
+				"data": [
+					"The Secret of Monkey Island",
+					"Firepaw",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT25M",
+				"length_t": 1500,
+				"scheduled": "2019-07-21T12:21:00+02:00",
+				"scheduled_t": 1563704460,
+				"data": [
+					"Day of the Tentacle Remastered",
+					"NoobSalmon",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT18M",
+				"length_t": 1080,
+				"scheduled": "2019-07-21T12:56:00+02:00",
+				"scheduled_t": 1563706560,
+				"data": [
+					"realMyst: Masterpiece Edition",
+					"Gelly",
+					"PC",
+					"All Pages",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-21T13:24:00+02:00",
+				"scheduled_t": 1563708240,
+				"data": [
+					"Ultima IX: Ascension",
+					"ElCidDK",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT22M",
+				"length_t": 1320,
+				"scheduled": "2019-07-21T14:34:00+02:00",
+				"scheduled_t": 1563712440,
+				"data": [
+					"Gothic",
+					"PokerFacowaty",
+					"PC",
+					"No OoB",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT43M",
+				"length_t": 2580,
+				"scheduled": "2019-07-21T15:06:00+02:00",
+				"scheduled_t": 1563714360,
+				"data": [
+					"The Elder Scrolls IV: Oblivion",
+					"NoobSalmon",
+					"PC",
+					"No OoB",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H20M",
+				"length_t": 4800,
+				"scheduled": "2019-07-21T15:59:00+02:00",
+				"scheduled_t": 1563717540,
+				"data": [
+					"Monster Hunter World",
+					"Team Darkside",
+					"PS4",
+					"Showcase",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT48M",
+				"length_t": 2880,
+				"scheduled": "2019-07-21T17:29:00+02:00",
+				"scheduled_t": 1563722940,
+				"data": [
+					"The Legend of Zelda: Breath of the Wild",
+					"Linkus7",
+					"Switch",
+					"Any% (No Amiibo)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H35M",
+				"length_t": 5700,
+				"scheduled": "2019-07-21T18:27:00+02:00",
+				"scheduled_t": 1563726420,
+				"data": [
+					"Celeste",
+					"TGH_sr",
+					"PC",
+					"All Chapters",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H10M",
+				"length_t": 4200,
+				"scheduled": "2019-07-21T20:12:00+02:00",
+				"scheduled_t": 1563732720,
+				"data": [
+					"Tomb Raider: The Last Revelation",
+					"Cadarev",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H05M",
+				"length_t": 3900,
+				"scheduled": "2019-07-21T21:32:00+02:00",
+				"scheduled_t": 1563737520,
+				"data": [
+					"Prince of Persia: The Two Thrones",
+					"catalystz",
+					"PC",
+					"Any% (Normal)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT50M",
+				"length_t": 3000,
+				"scheduled": "2019-07-21T22:47:00+02:00",
+				"scheduled_t": 1563742020,
+				"data": [
+					"Asghan: The Dragon Slayer",
+					"havrd",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-21T23:47:00+02:00",
+				"scheduled_t": 1563745620,
+				"data": [
+					"Penumbra: Black Plague",
+					"TheKotti",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT3H05M",
+				"length_t": 11100,
+				"scheduled": "2019-07-22T00:32:00+02:00",
+				"scheduled_t": 1563748320,
+				"data": [
+					"The Last of Us",
+					"AnthonyCaliber",
+					"PS4",
+					"New Game (Grounded, Glitchless)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H25M",
+				"length_t": 5100,
+				"scheduled": "2019-07-22T03:47:00+02:00",
+				"scheduled_t": 1563760020,
+				"data": [
+					"Resident Evil 4",
+					"Call_me_Zeroo",
+					"PC",
+					"NG+",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H10M",
+				"length_t": 4200,
+				"scheduled": "2019-07-22T05:22:00+02:00",
+				"scheduled_t": 1563765720,
+				"data": [
+					"Octopath Traveler",
+					"Xoneris, yisk",
+					"PC",
+					"Single Story (Bid War)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT3H10M",
+				"length_t": 11400,
+				"scheduled": "2019-07-22T06:42:00+02:00",
+				"scheduled_t": 1563770520,
+				"data": [
+					"Need For Speed: The Run",
+					"Kuru",
+					"PC",
+					"Any% (Extreme)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT15M",
+				"length_t": 900,
+				"scheduled": "2019-07-22T10:02:00+02:00",
+				"scheduled_t": 1563782520,
+				"data": [
+					"Paris Marseille Racing",
+					"linkboss vs. Shigan_ vs. Gamonymous__",
+					"PS1",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT13M",
+				"length_t": 780,
+				"scheduled": "2019-07-22T10:27:00+02:00",
+				"scheduled_t": 1563784020,
+				"data": [
+					"The Last Ninja",
+					"skateman222",
+					"NES",
+					"Beat the game",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT05M",
+				"length_t": 300,
+				"scheduled": "2019-07-22T10:50:00+02:00",
+				"scheduled_t": 1563785400,
+				"data": [
+					"King Kong 2: Ikari no Megaton Punch",
+					"Apollo22237",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT14M",
+				"length_t": 840,
+				"scheduled": "2019-07-22T11:05:00+02:00",
+				"scheduled_t": 1563786300,
+				"data": ["Tennis", "JkL87", "NES", "Level 3", null, null, null, null],
+				"options": null
+			},
+			{
+				"length": "PT12M",
+				"length_t": 720,
+				"scheduled": "2019-07-22T11:29:00+02:00",
+				"scheduled_t": 1563787740,
+				"data": [
+					"Indiana Jones and the Last Crusade",
+					"TheMotherBrain86",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT01M",
+				"length_t": 60,
+				"scheduled": "2019-07-22T11:51:00+02:00",
+				"scheduled_t": 1563789060,
+				"data": [
+					"Urban Champion",
+					"JkL87",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT10M",
+				"length_t": 600,
+				"scheduled": "2019-07-22T12:02:00+02:00",
+				"scheduled_t": 1563789720,
+				"data": [
+					"Joe \u0026 Mac",
+					"EndySWE",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT08M",
+				"length_t": 480,
+				"scheduled": "2019-07-22T12:22:00+02:00",
+				"scheduled_t": 1563790920,
+				"data": [
+					"DuckTales",
+					"garadas21",
+					"NES",
+					"Any% (1p2c)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT13M",
+				"length_t": 780,
+				"scheduled": "2019-07-22T12:40:00+02:00",
+				"scheduled_t": 1563792000,
+				"data": [
+					"Karnov",
+					"Apollo22237",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT05M",
+				"length_t": 300,
+				"scheduled": "2019-07-22T13:03:00+02:00",
+				"scheduled_t": 1563793380,
+				"data": [
+					"Die Hard",
+					"Lucha_Gym",
+					"NES",
+					"Any% (Beginner)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT15M",
+				"length_t": 900,
+				"scheduled": "2019-07-22T13:18:00+02:00",
+				"scheduled_t": 1563794280,
+				"data": [
+					"Code Name: Viper",
+					"TheMotherBrain86",
+					"NES",
+					"Any% (Easy)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT09M",
+				"length_t": 540,
+				"scheduled": "2019-07-22T13:43:00+02:00",
+				"scheduled_t": 1563795780,
+				"data": ["Trojan", "Dxtr", "NES", "Any%", null, null, null, null],
+				"options": null
+			},
+			{
+				"length": "PT07M",
+				"length_t": 420,
+				"scheduled": "2019-07-22T14:02:00+02:00",
+				"scheduled_t": 1563796920,
+				"data": ["Jaws", "EndySWE", "NES", "Any%", null, null, null, null],
+				"options": null
+			},
+			{
+				"length": "PT16M",
+				"length_t": 960,
+				"scheduled": "2019-07-22T14:19:00+02:00",
+				"scheduled_t": 1563797940,
+				"data": [
+					"Fallout 2",
+					"JackofHearts",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT32M",
+				"length_t": 1920,
+				"scheduled": "2019-07-22T14:45:00+02:00",
+				"scheduled_t": 1563799500,
+				"data": [
+					"Fallout: New Vegas",
+					"kungkobra",
+					"PC",
+					"Glitchless",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT40M",
+				"length_t": 2400,
+				"scheduled": "2019-07-22T15:27:00+02:00",
+				"scheduled_t": 1563802020,
+				"data": [
+					"Serious Sam 3",
+					"Gelly, apple1417",
+					"PC",
+					"Any% Tourist (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-22T16:17:00+02:00",
+				"scheduled_t": 1563805020,
+				"data": [
+					"Half-Life",
+					"qDTH",
+					"PC",
+					"Any% (Scripted)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H10M",
+				"length_t": 4200,
+				"scheduled": "2019-07-22T17:02:00+02:00",
+				"scheduled_t": 1563807720,
+				"data": [
+					"Half-Life 2",
+					"maltemller",
+					"PC",
+					"New Engine Inbounds",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-22T18:22:00+02:00",
+				"scheduled_t": 1563812520,
+				"data": [
+					"Portal 2",
+					"Goodigo, Wilbo__",
+					"PC",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H15M",
+				"length_t": 4500,
+				"scheduled": "2019-07-22T19:07:00+02:00",
+				"scheduled_t": 1563815220,
+				"data": [
+					"Grand Theft Auto III",
+					"UltimaOmega07",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H30M",
+				"length_t": 5400,
+				"scheduled": "2019-07-22T20:32:00+02:00",
+				"scheduled_t": 1563820320,
+				"data": [
+					"I Wanna Find My Destiny",
+					"BBF_",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-22T22:12:00+02:00",
+				"scheduled_t": 1563826320,
+				"data": [
+					"I Wanna Take The Timemachine 2",
+					"Naloas",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT26M",
+				"length_t": 1560,
+				"scheduled": "2019-07-22T23:22:00+02:00",
+				"scheduled_t": 1563830520,
+				"data": [
+					"Point Blank Trilogy",
+					"Naegleria",
+					"PS2",
+					"Insane",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT4H20M",
+				"length_t": 15600,
+				"scheduled": "2019-07-22T23:58:00+02:00",
+				"scheduled_t": 1563832680,
+				"data": [
+					"Final Fantasy X-2",
+					"Leonis07 vs. Metako",
+					"PS2",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT3H25M",
+				"length_t": 12300,
+				"scheduled": "2019-07-23T04:28:00+02:00",
+				"scheduled_t": 1563848880,
+				"data": [
+					"The World Ends With You: Final Remix",
+					"Punchi",
+					"Switch",
+					"Any% (Normal)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT3H35M",
+				"length_t": 12900,
+				"scheduled": "2019-07-23T08:03:00+02:00",
+				"scheduled_t": 1563861780,
+				"data": [
+					"Kingdom Hearts III",
+					"Kayarune vs. desa3579",
+					"PS4",
+					"Any% (Beginner)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-23T11:48:00+02:00",
+				"scheduled_t": 1563875280,
+				"data": [
+					"Link: The Faces of Evil",
+					"Grumpmeister",
+					"Philips CD-i",
+					"All Cutscenes",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT13M",
+				"length_t": 780,
+				"scheduled": "2019-07-23T12:58:00+02:00",
+				"scheduled_t": 1563879480,
+				"data": [
+					"Dora the Explorer: Dora\u0027s World Adventure",
+					"Mr_Brood",
+					"GBA",
+					"Story Mode",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT25M",
+				"length_t": 1500,
+				"scheduled": "2019-07-23T13:21:00+02:00",
+				"scheduled_t": 1563880860,
+				"data": [
+					"Nintendogs",
+					"ZooKetra",
+					"Nintendo DS",
+					"All Beginner Golds",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT20M",
+				"length_t": 1200,
+				"scheduled": "2019-07-23T13:56:00+02:00",
+				"scheduled_t": 1563882960,
+				"data": [
+					"Mega Game 1",
+					"Samura1man vs. iKainalo",
+					"PC",
+					"Beat the game",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT08M",
+				"length_t": 480,
+				"scheduled": "2019-07-23T14:26:00+02:00",
+				"scheduled_t": 1563884760,
+				"data": [
+					"I am Bread",
+					"YanoKarozuno",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT11M",
+				"length_t": 660,
+				"scheduled": "2019-07-23T14:44:00+02:00",
+				"scheduled_t": 1563885840,
+				"data": [
+					"Red Lake",
+					"carska",
+					"PC",
+					"Any% (Skip Chapter 5)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT20M",
+				"length_t": 1200,
+				"scheduled": "2019-07-23T15:05:00+02:00",
+				"scheduled_t": 1563887100,
+				"data": ["Bugdom", "Jitaenow", "PC", "Any%", null, null, null, null],
+				"options": null
+			},
+			{
+				"length": "PT15M",
+				"length_t": 900,
+				"scheduled": "2019-07-23T15:35:00+02:00",
+				"scheduled_t": 1563888900,
+				"data": [
+					"hhGregg\u0027s Quest for Coupons",
+					"iKainalo",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT04M",
+				"length_t": 240,
+				"scheduled": "2019-07-23T16:00:00+02:00",
+				"scheduled_t": 1563890400,
+				"data": [
+					"Jelly Mario",
+					"JustTor",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-23T16:14:00+02:00",
+				"scheduled_t": 1563891240,
+				"data": [
+					"Awful Games",
+					"havrd \u0026 Friends",
+					"PC",
+					"Relay",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT40M",
+				"length_t": 2400,
+				"scheduled": "2019-07-23T17:24:00+02:00",
+				"scheduled_t": 1563895440,
+				"data": [
+					"Street Boyz",
+					"ThaRixer , Punchi , Jptje vs. SixRockFire , WarDrumsGaming , RebelDragon95",
+					"PS2",
+					"NG+ All Levels",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H",
+				"length_t": 7200,
+				"scheduled": "2019-07-23T18:14:00+02:00",
+				"scheduled_t": 1563898440,
+				"data": [
+					"Borderlands 2",
+					"Mr_Brood , Goodigo",
+					"PC",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-23T20:24:00+02:00",
+				"scheduled_t": 1563906240,
+				"data": [
+					"Divinity: Original Sin II",
+					"Cropax , MrWalrus3451",
+					"PC",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H40M",
+				"length_t": 6000,
+				"scheduled": "2019-07-23T21:04:00+02:00",
+				"scheduled_t": 1563908640,
+				"data": [
+					"Hearthstone: Blackrock Mountain",
+					"srd_27",
+					"PC",
+					"Heroic",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-23T22:54:00+02:00",
+				"scheduled_t": 1563915240,
+				"data": [
+					"Yu-Gi-Oh! Forbidden Memories",
+					"Mergy",
+					"PS1",
+					"Showcase",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H",
+				"length_t": 7200,
+				"scheduled": "2019-07-23T23:34:00+02:00",
+				"scheduled_t": 1563917640,
+				"data": [
+					"Pokemon Crystal Randomizer",
+					"360Chrism",
+					"PC",
+					"Beat Lance",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H40M",
+				"length_t": 6000,
+				"scheduled": "2019-07-24T01:44:00+02:00",
+				"scheduled_t": 1563925440,
+				"data": [
+					"Advance Wars: Dual Strike",
+					"SirFrozer",
+					"Nintendo DS",
+					"Any% Skills",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H25M",
+				"length_t": 5100,
+				"scheduled": "2019-07-24T03:34:00+02:00",
+				"scheduled_t": 1563932040,
+				"data": [
+					"Splatoon 2",
+					"Isaia",
+					"Switch",
+					"Octo Expansion Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT55M",
+				"length_t": 3300,
+				"scheduled": "2019-07-24T05:09:00+02:00",
+				"scheduled_t": 1563937740,
+				"data": [
+					"Learn with Pokémon: Typing Adventure",
+					"ShadowFrost",
+					"Nintendo DS",
+					"Catch Mew",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-24T06:14:00+02:00",
+				"scheduled_t": 1563941640,
+				"data": [
+					"The Typing of the Dead",
+					"pulla",
+					"PC",
+					"Arcade",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT20M",
+				"length_t": 1200,
+				"scheduled": "2019-07-24T06:54:00+02:00",
+				"scheduled_t": 1563944040,
+				"data": [
+					"Let\u0027s Tap",
+					"skateman222 vs. Christerious",
+					"Wii",
+					"Tap Runner",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-24T07:24:00+02:00",
+				"scheduled_t": 1563945840,
+				"data": [
+					"Darkest Dungeon",
+					"Tricrow vs. yisk vs. RebelDragon95",
+					"PC",
+					"Swine Prince",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H20M",
+				"length_t": 4800,
+				"scheduled": "2019-07-24T08:09:00+02:00",
+				"scheduled_t": 1563948540,
+				"data": [
+					"Halo 2",
+					"TehSorix , Dubhzo",
+					"Xbox360",
+					"Easy (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-24T09:39:00+02:00",
+				"scheduled_t": 1563953940,
+				"data": [
+					"Owlboy",
+					"Jitaenow",
+					"PC",
+					"All Bosses",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H20M",
+				"length_t": 8400,
+				"scheduled": "2019-07-24T10:49:00+02:00",
+				"scheduled_t": 1563958140,
+				"data": [
+					"Rise of the Tomb Raider",
+					"Pikkufighter vs. Leemyy vs. genesisprobestream",
+					"PC",
+					"Any% (Glitchless)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT55M",
+				"length_t": 3300,
+				"scheduled": "2019-07-24T13:19:00+02:00",
+				"scheduled_t": 1563967140,
+				"data": [
+					"Tomb Raider: Legend",
+					"RandomPinkBunny vs. rythin_sr",
+					"PC",
+					"Any% (No Bug Jump)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT25M",
+				"length_t": 1500,
+				"scheduled": "2019-07-24T14:24:00+02:00",
+				"scheduled_t": 1563971040,
+				"data": [
+					"Yoshi\u0027s Story",
+					"LoveBot",
+					"Wii VC",
+					"All Melons 1-Lap",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT45M",
+				"length_t": 2700,
+				"scheduled": "2019-07-24T14:59:00+02:00",
+				"scheduled_t": 1563973140,
+				"data": [
+					"Spark the Electric Jester 2",
+					"Argick",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT55M",
+				"length_t": 3300,
+				"scheduled": "2019-07-24T15:54:00+02:00",
+				"scheduled_t": 1563976440,
+				"data": [
+					"Sonic Mania Plus",
+					"Oldclov",
+					"PC",
+					"Knuckles",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-24T16:59:00+02:00",
+				"scheduled_t": 1563980340,
+				"data": [
+					"Sonic the Hedgehog (1991)",
+					"SuperSonic71087",
+					"Genesis",
+					"Beat The Game (Glitchless)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT12M",
+				"length_t": 720,
+				"scheduled": "2019-07-24T17:39:00+02:00",
+				"scheduled_t": 1563982740,
+				"data": [
+					"Chip \u0027N Dale: Rescue Rangers",
+					"sinister1 , EndySWE",
+					"NES",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT13M",
+				"length_t": 780,
+				"scheduled": "2019-07-24T18:01:00+02:00",
+				"scheduled_t": 1563984060,
+				"data": [
+					"Contra",
+					"TheMexicanRunner , Niss3",
+					"NES",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT15M",
+				"length_t": 900,
+				"scheduled": "2019-07-24T18:24:00+02:00",
+				"scheduled_t": 1563985440,
+				"data": [
+					"Ninja Gaiden",
+					"ShuriBear vs. Dxtr vs. Duckfist",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-24T18:49:00+02:00",
+				"scheduled_t": 1563986940,
+				"data": [
+					"Super Mario Bros. 2 (JP)",
+					"SuperSonic71087",
+					"NES",
+					"Warpless 8-4 FDS",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT38M",
+				"length_t": 2280,
+				"scheduled": "2019-07-24T19:29:00+02:00",
+				"scheduled_t": 1563989340,
+				"data": [
+					"Mega Man 2 Atari Demake",
+					"BigJon",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT41M",
+				"length_t": 2460,
+				"scheduled": "2019-07-24T20:17:00+02:00",
+				"scheduled_t": 1563992220,
+				"data": [
+					"Mega Man 4",
+					"Prisiii3 vs. Jokaah",
+					"NES",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-24T21:08:00+02:00",
+				"scheduled_t": 1563995280,
+				"data": [
+					"Mega Man 1",
+					"kkorvis \u0026 Friends",
+					"NES",
+					"Any% (All Stages)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT20M",
+				"length_t": 1200,
+				"scheduled": "2019-07-24T21:48:00+02:00",
+				"scheduled_t": 1563997680,
+				"data": [
+					"Battletoads (NES)",
+					"Dxtr, TheMexicanRunner",
+					"NES",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H30M",
+				"length_t": 5400,
+				"scheduled": "2019-07-24T22:18:00+02:00",
+				"scheduled_t": 1563999480,
+				"data": [
+					"Super Mario Maker 2",
+					"BigJon, TheHaxor vs. Fuzzyness, SuperSonic71087",
+					"Switch",
+					"Co-Op Races",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-24T23:58:00+02:00",
+				"scheduled_t": 1564005480,
+				"data": [
+					"NES Open Tournament Golf",
+					"BigJon",
+					"NES",
+					"All Courses",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT25M",
+				"length_t": 1500,
+				"scheduled": "2019-07-25T00:43:00+02:00",
+				"scheduled_t": 1564008180,
+				"data": [
+					"Castlevania: Symphony of the Night",
+					"Dxtr",
+					"Xbox360",
+					"Any% (NSC)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT30M",
+				"length_t": 1800,
+				"scheduled": "2019-07-25T01:18:00+02:00",
+				"scheduled_t": 1564010280,
+				"data": [
+					"Bloodstained: Curse of the Moon",
+					"HaosEdge",
+					"PC",
+					"Any% Normal/Veteran",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H",
+				"length_t": 7200,
+				"scheduled": "2019-07-25T01:58:00+02:00",
+				"scheduled_t": 1564012680,
+				"data": [
+					"The Messenger",
+					"TwoCplus",
+					"PC",
+					"Any% (No OoB)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H",
+				"length_t": 7200,
+				"scheduled": "2019-07-25T04:08:00+02:00",
+				"scheduled_t": 1564020480,
+				"data": [
+					"Bayonetta 2",
+					"Ricyosma",
+					"Switch",
+					"Any% (3rd Climax)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT7H40M",
+				"length_t": 27600,
+				"scheduled": "2019-07-25T06:18:00+02:00",
+				"scheduled_t": 1564028280,
+				"data": [
+					"Final Fantasy VII",
+					"Davesterio",
+					"PS2",
+					"Any% (No Slots)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT55M",
+				"length_t": 3300,
+				"scheduled": "2019-07-25T14:08:00+02:00",
+				"scheduled_t": 1564056480,
+				"data": [
+					"Cuphead",
+					"kalevan_herra, Kirthar vs. SBDWolf, TheMexicanRunner",
+					"PC",
+					"Low% (Expert, Current Patch, Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H20M",
+				"length_t": 4800,
+				"scheduled": "2019-07-25T15:13:00+02:00",
+				"scheduled_t": 1564060380,
+				"data": [
+					"Sekiro: Shadows Die Twice",
+					"Distortion2, SayviTV vs. Ushebti, danflesh111",
+					"PC",
+					"All Memories (NG)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-25T16:43:00+02:00",
+				"scheduled_t": 1564065780,
+				"data": [
+					"Sekiro: Shadows Die Twice",
+					"Distortion2",
+					"PC",
+					"Shura Ending",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT3H20M",
+				"length_t": 12000,
+				"scheduled": "2019-07-25T17:28:00+02:00",
+				"scheduled_t": 1564068480,
+				"data": [
+					"Grand Theft Auto: Vice City",
+					"KZ_FREW vs. Mhmd_FVC",
+					"PC",
+					"All Missions ($25%)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT45M",
+				"length_t": 2700,
+				"scheduled": "2019-07-25T20:58:00+02:00",
+				"scheduled_t": 1564081080,
+				"data": [
+					"SWAT 4",
+					"Shrimp, Goost91, wakecold, Yvathacal, eidgod, Noobest, coolkid, Tyriounet, zastbat, TheKotti",
+					"PC",
+					"All Missions 75+ (Hard, Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT25M",
+				"length_t": 1500,
+				"scheduled": "2019-07-25T21:53:00+02:00",
+				"scheduled_t": 1564084380,
+				"data": [
+					"Doom",
+					"wakecold vs. Tezur0 vs. Noobest",
+					"PC",
+					"Episodes 1-3 - UV Speed",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT35M",
+				"length_t": 2100,
+				"scheduled": "2019-07-25T22:28:00+02:00",
+				"scheduled_t": 1564086480,
+				"data": [
+					"Quake",
+					"praskOo_ vs. Elgu_ vs. SphereMJ vs. brainfluid",
+					"PC",
+					"Easy Run Randomized",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H",
+				"length_t": 7200,
+				"scheduled": "2019-07-25T23:13:00+02:00",
+				"scheduled_t": 1564089180,
+				"data": [
+					"Devil May Cry 5",
+					"FroobMcGuffin",
+					"PC",
+					"Any% (Human)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H45M",
+				"length_t": 9900,
+				"scheduled": "2019-07-26T01:23:00+02:00",
+				"scheduled_t": 1564096980,
+				"data": [
+					"Spyro: Enter the Dragonfly",
+					"Yeswally1",
+					"GameCube",
+					"100%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H25M",
+				"length_t": 8700,
+				"scheduled": "2019-07-26T04:18:00+02:00",
+				"scheduled_t": 1564107480,
+				"data": [
+					"Donkey Kong 64",
+					"Xafication",
+					"Wii U VC",
+					"No Levels Early",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT55M",
+				"length_t": 3300,
+				"scheduled": "2019-07-26T06:53:00+02:00",
+				"scheduled_t": 1564116780,
+				"data": [
+					"Crash Team Racing",
+					"Nattyo",
+					"PS2",
+					"Any% (Warpless)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT40M",
+				"length_t": 2400,
+				"scheduled": "2019-07-26T07:58:00+02:00",
+				"scheduled_t": 1564120680,
+				"data": [
+					"Clustertruck",
+					"Heinki",
+					"PC",
+					"Twitch%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT4H10M",
+				"length_t": 15000,
+				"scheduled": "2019-07-26T08:48:00+02:00",
+				"scheduled_t": 1564123680,
+				"data": [
+					"TrackMania Turbo",
+					"rioluTM",
+					"PC",
+					"All Flags",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H20M",
+				"length_t": 4800,
+				"scheduled": "2019-07-26T13:08:00+02:00",
+				"scheduled_t": 1564139280,
+				"data": [
+					"The Binding of Isaac Afterbirth+",
+					"YuCaesar, PassionDrama, Gamonymous__, Shigan_, Krakenos, Pingouin23",
+					"PC",
+					"Racing+ Season 6",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT19M",
+				"length_t": 1140,
+				"scheduled": "2019-07-26T14:38:00+02:00",
+				"scheduled_t": 1564144680,
+				"data": [
+					"TASBot plays SteamWorld Dig 2",
+					"dwangoAC",
+					"Linux",
+					"Any% by keylie",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT26M",
+				"length_t": 1560,
+				"scheduled": "2019-07-26T15:07:00+02:00",
+				"scheduled_t": 1564146420,
+				"data": [
+					"TASBot plays TAS Showcase",
+					"dwangoAC",
+					"Various",
+					"TAS Showcase",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-26T15:43:00+02:00",
+				"scheduled_t": 1564148580,
+				"data": [
+					"GeoGuessr",
+					"Janmumrik vs. havrd vs. TheRedSock",
+					"PC",
+					"Scavenger Hunt",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT4H15M",
+				"length_t": 15300,
+				"scheduled": "2019-07-26T16:53:00+02:00",
+				"scheduled_t": 1564152780,
+				"data": [
+					"Dark Souls",
+					"catalystz",
+					"PC",
+					"100%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H30M",
+				"length_t": 9000,
+				"scheduled": "2019-07-26T21:18:00+02:00",
+				"scheduled_t": 1564168680,
+				"data": [
+					"The Witcher 3: Wild Hunt",
+					"Kaadzik",
+					"PC",
+					"Any% (Old Patch)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT4H",
+				"length_t": 14400,
+				"scheduled": "2019-07-26T23:58:00+02:00",
+				"scheduled_t": 1564178280,
+				"data": [
+					"The Legend Of Zelda: Ocarina Of Time",
+					"BaalNocturno, Amateseru, Fuzzyness",
+					"N64",
+					"Randomizer Multiworld (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT38M",
+				"length_t": 2280,
+				"scheduled": "2019-07-27T04:08:00+02:00",
+				"scheduled_t": 1564193280,
+				"data": [
+					"Noobow",
+					"Crrool",
+					"GB",
+					"Beat The Game",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H20M",
+				"length_t": 4800,
+				"scheduled": "2019-07-27T04:56:00+02:00",
+				"scheduled_t": 1564196160,
+				"data": [
+					"Captain Toad: Treasure Tracker",
+					"Cadarev, tocaloni1",
+					"Switch",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H07M",
+				"length_t": 7620,
+				"scheduled": "2019-07-27T06:26:00+02:00",
+				"scheduled_t": 1564201560,
+				"data": [
+					"Pokémon Yellow",
+					"ArayaLoL",
+					"GBP",
+					"Any% (Glitchless)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT28M",
+				"length_t": 1680,
+				"scheduled": "2019-07-27T08:43:00+02:00",
+				"scheduled_t": 1564209780,
+				"data": [
+					"Deru: The Art of Cooperation",
+					"acridstingray3, Ax2u",
+					"PC",
+					"Any% (Co-Op)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT20M",
+				"length_t": 1200,
+				"scheduled": "2019-07-27T09:21:00+02:00",
+				"scheduled_t": 1564212060,
+				"data": [
+					"Bastion",
+					"Kazzadan, HaosEdge, Leonmachar, acridstingray3, Harpa",
+					"PC",
+					"5p1c NG Any% No MS",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT18M",
+				"length_t": 1080,
+				"scheduled": "2019-07-27T09:51:00+02:00",
+				"scheduled_t": 1564213860,
+				"data": [
+					"kuso",
+					"Zet vs. Paulister",
+					"PC",
+					"Any%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT15M",
+				"length_t": 900,
+				"scheduled": "2019-07-27T10:19:00+02:00",
+				"scheduled_t": 1564215540,
+				"data": ["INK", "yajijy", "PC", "Any%", null, null, null, null],
+				"options": null
+			},
+			{
+				"length": "PT17M",
+				"length_t": 1020,
+				"scheduled": "2019-07-27T10:44:00+02:00",
+				"scheduled_t": 1564217040,
+				"data": [
+					"VVVVVV",
+					"mohoc7 vs. tzann",
+					"PC",
+					"Glitchless",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT10M",
+				"length_t": 600,
+				"scheduled": "2019-07-27T11:11:00+02:00",
+				"scheduled_t": 1564218660,
+				"data": [
+					"Refunct",
+					"360Chrism",
+					"PC",
+					"Any% + 100%",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT3H",
+				"length_t": 10800,
+				"scheduled": "2019-07-27T11:31:00+02:00",
+				"scheduled_t": 1564219860,
+				"data": [
+					"The Legend of Zelda: A Link to the Past",
+					"TGH_sr vs. WarpWorldStaff",
+					"SNES",
+					"Open Mode (Crowd Control Difficulty)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H",
+				"length_t": 3600,
+				"scheduled": "2019-07-27T14:41:00+02:00",
+				"scheduled_t": 1564231260,
+				"data": [
+					"Super Mario Bros. 3",
+					"SuperSonic71087 vs. TheHaxor vs. coolkid vs. duckfist",
+					"NES",
+					"Any% (Warpless)",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT1H50M",
+				"length_t": 6600,
+				"scheduled": "2019-07-27T15:51:00+02:00",
+				"scheduled_t": 1564235460,
+				"data": [
+					"Super Mario 64",
+					"cheese",
+					"N64",
+					"120 Star",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT20M",
+				"length_t": 1200,
+				"scheduled": "2019-07-27T17:51:00+02:00",
+				"scheduled_t": 1564242660,
+				"data": [
+					"Super Mario 64",
+					"cheese",
+					"N64",
+					"16 Star",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			},
+			{
+				"length": "PT2H30M",
+				"length_t": 9000,
+				"scheduled": "2019-07-27T18:21:00+02:00",
+				"scheduled_t": 1564244460,
+				"data": [
+					"Super Mario Sunshine",
+					"Team Samura1man vs. Team HiddenPower13",
+					"Wii",
+					"Any% Relay",
+					null,
+					null,
+					null,
+					null
+				],
+				"options": null
+			}
+		],
+		"links": [
+			{
+				"rel": "self",
+				"uri": "https://horaro.org/-/api/v1/schedules/1d11cdbel357987af0"
+			},
+			{
+				"rel": "event",
+				"uri": "https://horaro.org/-/api/v1/events/7a50r46ezxb6yxb41b"
+			},
+			{
+				"rel": "ticker",
+				"uri": "https://horaro.org/-/api/v1/schedules/1d11cdbel357987af0/ticker"
+			}
+		]
+	}
+}

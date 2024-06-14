@@ -30,6 +30,8 @@ const EventsList = () => {
 const syncMethodChoices = [
 	{ id: syncOptions.gdqTracker, name: "GDQ Tracker" },
 	{ id: syncOptions.rpglbTracker, name: "RPGLB Tracker" },
+	{ id: syncOptions.esaHoraro, name: "ESA Horaro" },
+	{ id: "none", name: "None" },
 ];
 
 const EventsCreate = () => {
