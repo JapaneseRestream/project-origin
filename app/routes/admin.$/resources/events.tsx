@@ -1,6 +1,5 @@
 import { useFetcher } from "@remix-run/react";
 import {
-	Create,
 	DateField,
 	DateTimeInput,
 	List,
@@ -13,7 +12,7 @@ import {
 } from "react-admin";
 
 import { syncOptions } from "../../../lib/api/sync-options";
-import { Datagrid, Edit } from "../components/override";
+import { Create, Datagrid, Edit } from "../components/override";
 
 const EventsList = () => {
 	return (
