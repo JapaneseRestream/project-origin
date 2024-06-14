@@ -24,7 +24,7 @@ model Events {
   id             String   @id @default(uuid())
   name           String
   shortName      String   @unique
-  startsAt       DateTime
+  startsAt       DateTime?
   syncMethod     String
   syncExternalId String?
   createdAt      DateTime @default(now())

@@ -50,6 +50,12 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 	const runsToDelete = existingRuns.filter(
 		(run) => !run.syncExternalId || !newRunIds.has(run.syncExternalId),
 	);
+	let startsAt: Date | undefined;
+	for (const run of runs) {
+		if (!startsAt || run.startsAt < startsAt) {
+			startsAt = run.startsAt;
+		}
+	}
 
 	await Promise.all([
 		...runsToDelete.map((run) =>
@@ -74,6 +80,10 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 				},
 			}),
 		),
+		context.prisma.events.update({
+			where: { id: eventId },
+			data: { startsAt },
+		}),
 	]);
 
 	return json(null);

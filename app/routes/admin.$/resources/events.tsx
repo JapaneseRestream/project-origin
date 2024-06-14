@@ -39,7 +39,6 @@ const EventsCreate = () => {
 			<SimpleForm>
 				<TextInput source="name" required />
 				<TextInput source="shortName" required />
-				<DateTimeInput source="startsAt" required />
 				<SelectInput source="syncMethod" choices={syncMethodChoices} required />
 				<TextInput source="syncExternalId" />
 			</SimpleForm>
