@@ -21,9 +21,9 @@ export default () => {
 			basename="/admin"
 			dataProvider={dataProvider("/admin/api")}
 		>
-			{usersResource}
 			{eventsResource}
 			{runsResource}
+			{usersResource}
 		</Admin>
 	);
 };
