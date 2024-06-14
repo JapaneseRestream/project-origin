@@ -1,0 +1,26 @@
+diff --git a/dist/parser/handler.js b/dist/parser/handler.js
+index c0fb5698b595ea7d00537277c490f3e0218e69d0..9ff94a596f13008734eeb1b5598741f5912d0983 100644
+--- a/dist/parser/handler.js
++++ b/dist/parser/handler.js
+@@ -228,7 +228,7 @@ var Handler = function () {
+ 
+ module.exports = Handler;
+ 
+-var globalScope = typeof window === "undefined" ? global : window;
++var globalScope = globalThis;
+ function isInstanceOfTypeName(element, typeName) {
+   if (element instanceof globalScope[typeName]) {
+     return true; //Buffer and complex objects
+diff --git a/lib/parser/handler.js b/lib/parser/handler.js
+index 2b9288a2416b469826637df229cd28e0c8797835..f677df60bc90f45d42790076bc860bc0979834bb 100644
+--- a/lib/parser/handler.js
++++ b/lib/parser/handler.js
+@@ -192,7 +192,7 @@ class Handler {
+ 
+ module.exports = Handler;
+ 
+-const globalScope = typeof(window)==="undefined" ? global : window;
++const globalScope = globalThis;
+ function isInstanceOfTypeName(element, typeName){
+   if( element instanceof globalScope[typeName] ){
+     return true;//Buffer and complex objects

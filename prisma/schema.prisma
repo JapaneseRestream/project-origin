@@ -12,9 +12,41 @@ datasource db {
 }
 
 model Users {
-  id    String @id @default(uuid())
-  email String @unique
+  id          String   @id @default(uuid())
+  discordId   String   @unique
+  displayName String
+  isAdmin     Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model Events {
+  id             String   @id @default(uuid())
+  name           String
+  shortName      String   @unique
+  startsAt       DateTime
+  syncMethod     String
+  syncExternalId String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  Runs Runs[]
+}
+
+model Runs {
+  id             String   @id @default(uuid())
+  eventId        String
+  originalName   String
+  translatedName String?
+  category       String?
+  playedWith     String?
+  startsAt       DateTime
+  syncExternalId String?
+  vodUrl         String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  event Events @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, syncExternalId])
 }

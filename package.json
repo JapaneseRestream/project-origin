@@ -6,44 +6,64 @@
 	"scripts": {
 		"build": "remix vite:build",
 		"deploy": "wrangler pages deploy",
-		"dev": "run-p dev:*",
+		"dev": "prisma generate && run-p dev:*",
 		"dev:remix": "remix vite:dev",
 		"dev:types": "tsc -b --watch --preserveWatchOutput",
 		"lint": "eslint .",
-		"check-format": "prettier --check . && biome check .",
-		"format": "prettier --write . && biome check --apply .",
-		"typegen": "wrangler types"
+		"check-format": "prettier --check .",
+		"format": "prettier --write .",
+		"typegen": "wrangler types",
+		"prepare": "prisma generate && panda codegen"
 	},
 	"dependencies": {
-		"@prisma/adapter-d1": "^5.14.0",
-		"@prisma/client": "^5.14.0",
+		"@conform-to/react": "^1.1.4",
+		"@conform-to/zod": "^1.1.4",
+		"@prisma/adapter-d1": "^5.15.0",
+		"@prisma/client": "^5.15.0",
+		"@radix-ui/themes": "^3.0.5",
 		"@remix-run/cloudflare": "^2.9.2",
 		"@remix-run/cloudflare-pages": "^2.9.2",
 		"@remix-run/react": "^2.9.2",
-		"isbot": "^5.1.8",
+		"isbot": "^5.1.9",
+		"ky": "^1.3.0",
+		"next-themes": "^0.3.0",
 		"ra-data-simple-prisma": "^5.2.0",
+		"react": "^18.3.1",
 		"react-admin": "^4.16.18",
+		"react-dom": "^18.3.1",
 		"remix-auth": "^3.7.0",
 		"remix-auth-discord": "^1.3.3",
+		"ts-pattern": "^5.2.0",
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.7.3",
-		"@cloudflare/workers-types": "^4.20240512.0",
+		"@cloudflare/workers-types": "^4.20240605.0",
 		"@eslint/js": "^9.4.0",
+		"@pandacss/dev": "^0.40.1",
 		"@remix-run/dev": "^2.9.2",
 		"@types/eslint__js": "^8.42.3",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-react-hooks": "^4.6.2",
-		"npm-run-all": "^4.1.5",
-		"prettier": "^3.3.0",
-		"prisma": "^5.14.0",
+		"eslint-plugin-simple-import-sort": "^12.1.0",
+		"execa": "^9.2.0",
+		"npm-run-all2": "^6.2.0",
+		"prettier": "^3.3.2",
+		"prisma": "^5.15.0",
+		"tsx": "^4.15.2",
 		"typescript": "~5.4.5",
-		"typescript-eslint": "^7.11.0",
-		"vite": "^5.2.12",
-		"vite-plugin-node-polyfills": "^0.22.0",
-		"wrangler": "^3.58.0"
+		"typescript-eslint": "^7.13.0",
+		"vite": "^5.2.13",
+		"wrangler": "^3.60.2"
+	},
+	"engines": {
+		"node": "^20.14.0",
+		"npm": "10"
+	},
+	"pnpm": {
+		"patchedDependencies": {
+			"jsonexport@3.2.0": "patches/jsonexport@3.2.0.patch"
+		}
 	}
 }

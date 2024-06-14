@@ -2,8 +2,11 @@
 
 name = "project-origin"
 pages_build_output_dir = "./build/client"
-compatibility_date = "2022-06-02"
-compatibility_flags = ["streams_enable_constructors"]
+compatibility_date = "2024-06-02"
+
+[vars]
+SUPER_ADMIN_DISCORD_ID = "159600065017675778"
+PNPM_VERSION = "9.3.0"
 
 [[kv_namespaces]]
 binding = "KV_SESSION_STORAGE"
@@ -12,7 +15,10 @@ id = "b0b800e360e7459f8f2f74d83ceeb732"
 [[d1_databases]]
 binding = "DB"
 database_name = "dev-project-origin"
-database_id = "ae6b6b3d-7350-449d-9d29-b83c5a75fb8d"
+database_id = "75ee34c3-dffd-4584-a81f-3f297073a685"
+
+[env.production.vars]
+SUPER_ADMIN_DISCORD_ID = "159600065017675778"
 
 [[env.production.kv_namespaces]]
 binding = "KV_SESSION_STORAGE"

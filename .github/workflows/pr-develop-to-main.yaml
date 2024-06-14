@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          gh pr create --base main --head develop --title "merge develop into main" --body ""
+          gh pr create --base main --head develop --title "merge develop into main" --body "" || true
         env:
           GH_TOKEN: ${{ github.token }}

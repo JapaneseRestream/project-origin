@@ -4,12 +4,6 @@ export const action = async ({
 	request,
 	context: { authenticator },
 }: ActionFunctionArgs) => {
-	try {
-		await authenticator.logout(request, { redirectTo: "" });
-	} catch (error) {
-		if (!(error instanceof Response)) {
-			throw error;
-		}
-	}
+	await authenticator.authenticate("discord-registration", request);
 	return new Response(null);
 };
