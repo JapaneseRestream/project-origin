@@ -2,12 +2,7 @@ import "./styles.css";
 
 import { Button, Heading, Theme } from "@radix-ui/themes";
 import { json, type LoaderFunctionArgs } from "@remix-run/cloudflare";
-import {
-	Outlet,
-	useFetcher,
-	useLoaderData,
-	useLocation,
-} from "@remix-run/react";
+import { Outlet, useFetcher, useLoaderData } from "@remix-run/react";
 import { ThemeProvider } from "next-themes";
 
 import { css } from "../../../styled-system/css";
@@ -77,7 +72,7 @@ const Header = () => {
 				backgroundColor: "var(--color-background)",
 			})}
 		>
-			<Heading as="h1" size="4" className={css({hideBelow: 'sm'})}>
+			<Heading as="h1" size="4" className={css({ hideBelow: "sm" })}>
 				<RemixLink to="/">Japanese Restream</RemixLink>
 			</Heading>
 			<div className={css({ flexGrow: "2" })}>

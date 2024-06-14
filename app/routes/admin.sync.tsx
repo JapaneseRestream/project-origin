@@ -1,46 +1,12 @@
 import { parseWithZod } from "@conform-to/zod";
-import {
-	type ActionFunctionArgs,
-	json,
-	type LoaderFunctionArgs,
-} from "@remix-run/cloudflare";
-import { Form, useLoaderData, useNavigation } from "@remix-run/react";
+import { type ActionFunctionArgs, json } from "@remix-run/cloudflare";
 import { match, P } from "ts-pattern";
 import { z } from "zod";
 
 import { gdqTracker } from "../lib/api/gdq-tracker";
+import { rpglbTracker } from "../lib/api/rpglb-tracker";
+import { syncOptions } from "../lib/api/sync-options";
 import { assertAdmin } from "../lib/session.server";
-
-export const loader = async ({ request, context }: LoaderFunctionArgs) => {
-	await assertAdmin(request, context);
-	const events = await context.prisma.events.findMany({
-		select: { id: true, name: true },
-		orderBy: { startsAt: "desc" },
-	});
-	return json({ events });
-};
-
-export default () => {
-	const { events } = useLoaderData<typeof loader>();
-	const navigation = useNavigation();
-	const sending = navigation.state === "submitting";
-
-	return (
-		<>
-			<h1>Sync Event</h1>
-			<div>
-				{sending
-					? "Syncing..."
-					: events.map((event) => (
-							<Form key={event.id} method="post">
-								<input type="hidden" name="eventId" value={event.id} />
-								<button type="submit">{event.name}</button>
-							</Form>
-						))}
-			</div>
-		</>
-	);
-};
 
 const actionSchema = z.object({ eventId: z.string().uuid() });
 
@@ -65,12 +31,17 @@ export const action = async ({ request, context }: ActionFunctionArgs) => {
 
 	const runs = await match(event)
 		.with(
-			{ syncMethod: "gdq-tracker", syncExternalId: P.string },
+			{ syncMethod: syncOptions.gdqTracker, syncExternalId: P.string },
 			async (event) => gdqTracker(event.syncExternalId),
+		)
+		.with(
+			{ syncMethod: syncOptions.rpglbTracker, syncExternalId: P.string },
+			async (event) => rpglbTracker(event.syncExternalId),
 		)
 		.otherwise(() => {
 			throw new Response("unsupported sync method", { status: 400 });
 		});
+
 	const newRunIds = new Set(runs.map((run) => run.id));
 	const existingRuns = await context.prisma.runs.findMany({
 		where: { eventId },

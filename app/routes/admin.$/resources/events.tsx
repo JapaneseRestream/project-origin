@@ -1,3 +1,4 @@
+import { useFetcher } from "@remix-run/react";
 import {
 	Create,
 	DateField,
@@ -8,8 +9,10 @@ import {
 	SimpleForm,
 	TextField,
 	TextInput,
+	useGetRecordId,
 } from "react-admin";
 
+import { syncOptions } from "../../../lib/api/sync-options";
 import { Datagrid, Edit } from "../components/override";
 
 const EventsList = () => {
@@ -19,34 +22,62 @@ const EventsList = () => {
 				<TextField source="name" />
 				<TextField source="shortName" />
 				<DateField source="startsAt" showTime />
+				<TextField source="syncMethod" />
+				<TextField source="syncExternalId" />
 			</Datagrid>
 		</List>
 	);
 };
 
-const form = (
-	<SimpleForm>
-		<TextInput source="name" required />
-		<TextInput source="shortName" required />
-		<DateTimeInput source="startsAt" required />
-		<SelectInput
-			source="syncMethod"
-			choices={[
-				{ id: "gdq-tracker", name: "GDQ Tracker" },
-				{ id: "none", name: "None" },
-			]}
-			required
-		/>
-		<TextInput source="syncExternalId" />
-	</SimpleForm>
-);
+const syncMethodChoices = [
+	{ id: syncOptions.gdqTracker, name: "GDQ Tracker" },
+	{ id: syncOptions.rpglbTracker, name: "RPGLB Tracker" },
+];
 
 const EventsCreate = () => {
-	return <Create>{form}</Create>;
+	return (
+		<Create>
+			<SimpleForm>
+				<TextInput source="name" required />
+				<TextInput source="shortName" required />
+				<DateTimeInput source="startsAt" required />
+				<SelectInput source="syncMethod" choices={syncMethodChoices} required />
+				<TextInput source="syncExternalId" />
+			</SimpleForm>
+		</Create>
+	);
 };
 
 const EventsEdit = () => {
-	return <Edit>{form}</Edit>;
+	const fetcher = useFetcher();
+	const id = useGetRecordId();
+	const submitting = fetcher.state === "submitting";
+	return (
+		<Edit>
+			<SimpleForm>
+				<TextInput source="name" required />
+				<TextInput source="shortName" required />
+				<DateTimeInput source="startsAt" required />
+				<SelectInput source="syncMethod" choices={syncMethodChoices} required />
+				<TextInput source="syncExternalId" />
+				{submitting ? (
+					<div>Syncing...</div>
+				) : (
+					<button
+						type="button"
+						onClick={() => {
+							fetcher.submit(
+								{ eventId: id },
+								{ method: "post", action: "/admin/sync" },
+							);
+						}}
+					>
+						Sync
+					</button>
+				)}
+			</SimpleForm>
+		</Edit>
+	);
 };
 
 export const eventsResource = (
