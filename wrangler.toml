@@ -19,6 +19,7 @@ database_id = "75ee34c3-dffd-4584-a81f-3f297073a685"
 
 [env.production.vars]
 SUPER_ADMIN_DISCORD_ID = "159600065017675778"
+PNPM_VERSION = "9.3.0"
 
 [[env.production.kv_namespaces]]
 binding = "KV_SESSION_STORAGE"
